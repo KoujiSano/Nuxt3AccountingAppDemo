@@ -5,7 +5,7 @@
         <div class="card">
           <div class="card-header">各種入力</div>
           <ul class="list-group list-group-flush">
-            <li class="list-group-item"><a href="#" class="card-link">複合仕訳入力</a></li>
+            <li class="list-group-item"><NuxtLink to="/multientry" class="card-link">複合仕訳入力</NuxtLink></li>
           </ul>
         </div>
       </div>
