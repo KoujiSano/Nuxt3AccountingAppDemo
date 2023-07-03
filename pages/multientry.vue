@@ -1,67 +1,32 @@
 <template>
   <div class="container">
-    <div class="row">
-      <div class="col">
-        <table class="table">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
-      <td>@twitter</td>
-    </tr>
-  </tbody>
-</table>
+    <div class="d-flex">
+      <div class="d-flex align-content-center flex-wrap border">
+        <div class="p-2">行</div>
       </div>
-      <div class="col">
-        <table class="table">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
-      <td>@twitter</td>
-    </tr>
-  </tbody>
-</table>
+      <div class="flex-fill">
+        <div class="d-flex">
+          <div class="p-2 flex-fill border">科目</div>
+          <div class="p-2 flex-fill border">補助</div>
+          <div class="p-2 flex-fill border">名称</div>
+          <div class="p-2 flex-fill border">金額</div>
+        </div>
+        <div class="d-flex">
+          <div class="p-2 border w-25">部門</div>
+          <div class="p-2 flex-fill border">摘要</div>
+        </div>
+      </div>
+      <div class="flex-fill">
+        <div class="d-flex">
+          <div class="p-2 flex-fill border">科目</div>
+          <div class="p-2 flex-fill border">補助</div>
+          <div class="p-2 flex-fill border">名称</div>
+          <div class="p-2 flex-fill border">金額</div>
+        </div>
+        <div class="d-flex">
+          <div class="p-2 border w-25">部門</div>
+          <div class="p-2 flex-fill border">摘要</div>
+        </div>
       </div>
     </div>
   </div>

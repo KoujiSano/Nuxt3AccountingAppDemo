@@ -1,5 +1,5 @@
 <template>
   <div class="container">
-    Hello World
+    <NuxtLink to="/home" class="">会計アプリ</NuxtLink>
   </div>
 </template>
