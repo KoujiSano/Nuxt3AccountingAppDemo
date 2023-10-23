@@ -4,7 +4,8 @@ export default defineNuxtConfig({
         '@vueuse/nuxt',
         '@nuxt/content',
         'usebootstrap',
-        'nuxt-icon'
+        'nuxt-icon',
+        "@nuxt/image"
     ],
     css: [
         "bootstrap/scss/bootstrap.scss"
