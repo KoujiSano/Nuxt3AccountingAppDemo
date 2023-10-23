@@ -25,12 +25,3 @@
         </table>
     </div>
 </template>
-
-<script>
-export default {
-    async asyncData({ $axios }) {
-        const response = await $axios.get('/api/kessan')
-        return { kessanData: response.data }
-    }
-}
-</script>
