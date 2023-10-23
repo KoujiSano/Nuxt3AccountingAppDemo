@@ -13,7 +13,7 @@
         <div class="card">
           <div class="card-header">各種出力</div>
           <ul class="list-group list-group-flush">
-            <li class="list-group-item"><a href="#" class="card-link">仕訳帳</a></li>
+            <li class="list-group-item"><NuxtLink to="/demo/bookKeepingJournal/journalbook" class="card-link">仕訳帳</NuxtLink></li>
             <li class="list-group-item"><a href="#" class="card-link">仕訳検索</a></li>
             <li class="list-group-item">
               <NuxtLink to="/accountledger" class="card-link">総勘定元帳</NuxtLink>
