@@ -71,6 +71,48 @@
                         <b-td text-alignment="center">Cell</b-td>
                         <b-td text-alignment="center">Cell</b-td>
                     </b-tr>
+                    <b-tr>
+                        <b-td scope="row" text-alignment="center">
+                            <b-a href="#">
+                                変更
+                            </b-a>
+                        </b-td>
+                        <b-td>Cell</b-td>
+                        <b-td>Cell</b-td>
+                        <b-td>Cell</b-td>
+                        <b-td>Cell</b-td>
+                        <b-td text-alignment="center">Cell</b-td>
+                        <b-td text-alignment="center">Cell</b-td>
+                        <b-td text-alignment="center">Cell</b-td>
+                    </b-tr>
+                    <b-tr>
+                        <b-td scope="row" text-alignment="center">
+                            <b-a href="#">
+                                変更
+                            </b-a>
+                        </b-td>
+                        <b-td>Cell</b-td>
+                        <b-td>Cell</b-td>
+                        <b-td>Cell</b-td>
+                        <b-td>Cell</b-td>
+                        <b-td text-alignment="center">Cell</b-td>
+                        <b-td text-alignment="center">Cell</b-td>
+                        <b-td text-alignment="center">Cell</b-td>
+                    </b-tr>
+                    <b-tr>
+                        <b-td scope="row" text-alignment="center">
+                            <b-a href="#">
+                                変更
+                            </b-a>
+                        </b-td>
+                        <b-td>Cell</b-td>
+                        <b-td>Cell</b-td>
+                        <b-td>Cell</b-td>
+                        <b-td>Cell</b-td>
+                        <b-td text-alignment="center">Cell</b-td>
+                        <b-td text-alignment="center">Cell</b-td>
+                        <b-td text-alignment="center">Cell</b-td>
+                    </b-tr>
                 </b-tbody>
             </b-table>
         </b-div>
