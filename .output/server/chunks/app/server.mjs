@@ -1,10 +1,10 @@
-import { hasInjectionContext, getCurrentInstance, version, unref, inject, defineAsyncComponent, useSSRContext, createApp, effectScope, reactive, provide, onErrorCaptured, onServerPrefetch, createVNode, resolveDynamicComponent, toRef, shallowRef, shallowReactive, isReadonly, isRef, isShallow, isReactive, toRaw, withCtx, mergeProps, nextTick, defineComponent, computed, ref, h, Suspense, Transition } from 'vue';
+import { hasInjectionContext, getCurrentInstance, version, unref, inject, defineAsyncComponent, ref, getCurrentScope, watch, onScopeDispose, useSSRContext, createApp, effectScope, reactive, nextTick, provide, onErrorCaptured, onServerPrefetch, createVNode, resolveDynamicComponent, toRef, shallowRef, shallowReactive, isReadonly, isRef, isShallow, isReactive, toRaw, withCtx, mergeProps, defineComponent, computed, h, Suspense, Transition } from 'vue';
 import { d as useRuntimeConfig$1, w as withQuery, l as hasProtocol, p as parseURL, m as isScriptProtocol, j as joinURL, h as createError$1, $ as $fetch, n as sanitizeStatusCode, o as createHooks, q as defu } from '../nitro/node-server.mjs';
 import { getActiveHead } from 'unhead';
 import { defineHeadPlugin } from '@unhead/shared';
 import { createMemoryHistory, createRouter, START_LOCATION, useRoute as useRoute$1, RouterView } from 'vue-router';
-import { keys } from 'lodash-es';
-import { ssrRenderSuspense, ssrRenderComponent, ssrRenderVNode } from 'vue/server-renderer';
+import { set, forOwn, isEmpty, pickBy, isNumber, isString as isString$1, isArray, keys } from 'lodash-es';
+import { ssrRenderSuspense, ssrRenderComponent, ssrRenderVNode, ssrRenderAttrs } from 'vue/server-renderer';
 import 'node:http';
 import 'node:https';
 import 'fs';
@@ -299,13 +299,13 @@ function defineGetter(obj, key, val) {
   Object.defineProperty(obj, key, { get: () => val });
 }
 version.startsWith("3");
-function resolveUnref(r) {
+function resolveUnref$1(r) {
   return typeof r === "function" ? r() : unref(r);
 }
 function resolveUnrefHeadInput(ref2, lastKey = "") {
   if (ref2 instanceof Promise)
     return ref2;
-  const root = resolveUnref(ref2);
+  const root = resolveUnref$1(ref2);
   if (!ref2 || !root)
     return root;
   if (Array.isArray(root))
@@ -600,7 +600,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/_...slug_-e7986328.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/_...slug_-8dd2d303.mjs').then((m) => m.default || m)
   },
   {
     name: "demo-accountconfig",
@@ -627,12 +627,28 @@ const _routes = [
     component: () => import('./_nuxt/accountledger-10c51565.mjs').then((m) => m.default || m)
   },
   {
+    name: "demo-BasicInformationSetting-AccountItem",
+    path: "/demo/BasicInformationSetting/AccountItem",
+    meta: {},
+    alias: [],
+    redirect: void 0,
+    component: () => import('./_nuxt/AccountItem-3e541d59.mjs').then((m) => m.default || m)
+  },
+  {
     name: "demo-bookKeepingJournal-journalbook",
     path: "/demo/bookKeepingJournal/journalbook",
     meta: {},
     alias: [],
     redirect: void 0,
     component: () => import('./_nuxt/journalbook-62a5eed7.mjs').then((m) => m.default || m)
+  },
+  {
+    name: "demo-Darkness_KessanHoukoku_MARK_V1_mp5-KessanHoukoku",
+    path: "/demo/Darkness_KessanHoukoku_MARK_V1_mp5/KessanHoukoku",
+    meta: {},
+    alias: [],
+    redirect: void 0,
+    component: () => import('./_nuxt/KessanHoukoku-6575f08d.mjs').then((m) => m.default || m)
   },
   {
     name: "demo-game",
@@ -651,12 +667,20 @@ const _routes = [
     component: () => import('./_nuxt/grid-751f1e4e.mjs').then((m) => m.default || m)
   },
   {
+    name: "demo-hojomototyou-subledger",
+    path: "/demo/hojomototyou/subledger",
+    meta: {},
+    alias: [],
+    redirect: void 0,
+    component: () => import('./_nuxt/subledger-044d1568.mjs').then((m) => m.default || m)
+  },
+  {
     name: "demo-home",
     path: "/demo/home",
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/home-def0bca4.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/home-2c075bcf.mjs').then((m) => m.default || m)
   },
   {
     name: "demo-multientry",
@@ -675,20 +699,20 @@ const _routes = [
     component: () => import('./_nuxt/recipe-e42d39f2.mjs').then((m) => m.default || m)
   },
   {
+    name: "demo-Whiteshining_SeikisiSoukanteiMotocho_XxPROxX_Mrk2_mp4-soukantei",
+    path: "/demo/Whiteshining_SeikisiSoukanteiMotocho_XxPROxX_Mrk2_mp4/soukantei",
+    meta: {},
+    alias: [],
+    redirect: void 0,
+    component: () => import('./_nuxt/soukantei-17de6010.mjs').then((m) => m.default || m)
+  },
+  {
     name: "index",
     path: "/",
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/index-5b3fa51c.mjs').then((m) => m.default || m)
-  },
-  {
-    name: "KessanHoukoku",
-    path: "/KessanHoukoku",
-    meta: {},
-    alias: [],
-    redirect: void 0,
-    component: () => import('./_nuxt/KessanHoukoku-2377241a.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/index-22608638.mjs').then((m) => m.default || m)
   }
 ];
 const routerOptions0 = {
@@ -936,12 +960,12 @@ const revive_payload_server_eJ33V7gbc6 = /* @__PURE__ */ defineNuxtPlugin({
     }
   }
 });
-const LazyContentDoc = defineAsyncComponent(() => import('./_nuxt/ContentDoc-678ced0b.mjs').then((r) => r.default));
-const LazyContentList = defineAsyncComponent(() => import('./_nuxt/ContentList-0aa880f2.mjs').then((r) => r.default));
-const LazyContentNavigation = defineAsyncComponent(() => import('./_nuxt/ContentNavigation-5052c047.mjs').then((r) => r.default));
-const LazyContentQuery = defineAsyncComponent(() => import('./_nuxt/ContentQuery-2f0c7688.mjs').then((r) => r.default));
-const LazyContentRenderer = defineAsyncComponent(() => import('./_nuxt/ContentRenderer-0c7a236c.mjs').then((r) => r.default));
-const LazyContentRendererMarkdown = defineAsyncComponent(() => import('./_nuxt/ContentRendererMarkdown-0356232b.mjs').then((r) => r.default));
+const LazyContentDoc = defineAsyncComponent(() => import('./_nuxt/ContentDoc-deae6454.mjs').then((r) => r.default));
+const LazyContentList = defineAsyncComponent(() => import('./_nuxt/ContentList-166fbd0f.mjs').then((r) => r.default));
+const LazyContentNavigation = defineAsyncComponent(() => import('./_nuxt/ContentNavigation-b695f39d.mjs').then((r) => r.default));
+const LazyContentQuery = defineAsyncComponent(() => import('./_nuxt/ContentQuery-3675fa05.mjs').then((r) => r.default));
+const LazyContentRenderer = defineAsyncComponent(() => import('./_nuxt/ContentRenderer-9dd16172.mjs').then((r) => r.default));
+const LazyContentRendererMarkdown = defineAsyncComponent(() => import('./_nuxt/ContentRendererMarkdown-371ef3f8.mjs').then((r) => r.default));
 const LazyContentSlot = defineAsyncComponent(() => import('./_nuxt/ContentSlot-ccead881.mjs').then((r) => r.default));
 const LazyDocumentDrivenEmpty = defineAsyncComponent(() => import('./_nuxt/DocumentDrivenEmpty-e7fcdb87.mjs').then((r) => r.default));
 const LazyDocumentDrivenNotFound = defineAsyncComponent(() => import('./_nuxt/DocumentDrivenNotFound-84f1d547.mjs').then((r) => r.default));
@@ -949,17 +973,17 @@ const LazyMarkdown = defineAsyncComponent(() => import('./_nuxt/Markdown-47a9cc0
 const LazyProseCode = defineAsyncComponent(() => import('./_nuxt/ProseCode-d6bca6a9.mjs').then((r) => r.default));
 const LazyProseCodeInline = defineAsyncComponent(() => import('./_nuxt/ProseCodeInline-e2feec26.mjs').then((r) => r.default));
 const LazyProsePre = defineAsyncComponent(() => import('./_nuxt/ProsePre-b1575e13.mjs').then((r) => r.default));
-const LazyProseA = defineAsyncComponent(() => import('./_nuxt/ProseA-838c1123.mjs').then((r) => r.default));
+const LazyProseA = defineAsyncComponent(() => import('./_nuxt/ProseA-267e5d97.mjs').then((r) => r.default));
 const LazyProseBlockquote = defineAsyncComponent(() => import('./_nuxt/ProseBlockquote-041451ca.mjs').then((r) => r.default));
 const LazyProseEm = defineAsyncComponent(() => import('./_nuxt/ProseEm-da2ed168.mjs').then((r) => r.default));
-const LazyProseH1 = defineAsyncComponent(() => import('./_nuxt/ProseH1-7eb511b2.mjs').then((r) => r.default));
-const LazyProseH2 = defineAsyncComponent(() => import('./_nuxt/ProseH2-7cdbe0ff.mjs').then((r) => r.default));
-const LazyProseH3 = defineAsyncComponent(() => import('./_nuxt/ProseH3-08948796.mjs').then((r) => r.default));
-const LazyProseH4 = defineAsyncComponent(() => import('./_nuxt/ProseH4-5d4488e5.mjs').then((r) => r.default));
-const LazyProseH5 = defineAsyncComponent(() => import('./_nuxt/ProseH5-51a4c619.mjs').then((r) => r.default));
-const LazyProseH6 = defineAsyncComponent(() => import('./_nuxt/ProseH6-3206dce4.mjs').then((r) => r.default));
+const LazyProseH1 = defineAsyncComponent(() => import('./_nuxt/ProseH1-4e52f4ee.mjs').then((r) => r.default));
+const LazyProseH2 = defineAsyncComponent(() => import('./_nuxt/ProseH2-b7870dbe.mjs').then((r) => r.default));
+const LazyProseH3 = defineAsyncComponent(() => import('./_nuxt/ProseH3-d37a3eaf.mjs').then((r) => r.default));
+const LazyProseH4 = defineAsyncComponent(() => import('./_nuxt/ProseH4-2fc8f25b.mjs').then((r) => r.default));
+const LazyProseH5 = defineAsyncComponent(() => import('./_nuxt/ProseH5-44d9b945.mjs').then((r) => r.default));
+const LazyProseH6 = defineAsyncComponent(() => import('./_nuxt/ProseH6-d88ee324.mjs').then((r) => r.default));
 const LazyProseHr = defineAsyncComponent(() => import('./_nuxt/ProseHr-346fe786.mjs').then((r) => r.default));
-const LazyProseImg = defineAsyncComponent(() => import('./_nuxt/ProseImg-089d3327.mjs').then((r) => r.default));
+const LazyProseImg = defineAsyncComponent(() => import('./_nuxt/ProseImg-766ea4e5.mjs').then((r) => r.default));
 const LazyProseLi = defineAsyncComponent(() => import('./_nuxt/ProseLi-758f4251.mjs').then((r) => r.default));
 const LazyProseOl = defineAsyncComponent(() => import('./_nuxt/ProseOl-3e392d7b.mjs').then((r) => r.default));
 const LazyProseP = defineAsyncComponent(() => import('./_nuxt/ProseP-10e370a7.mjs').then((r) => r.default));
@@ -971,8 +995,8 @@ const LazyProseTh = defineAsyncComponent(() => import('./_nuxt/ProseTh-6bc774c0.
 const LazyProseThead = defineAsyncComponent(() => import('./_nuxt/ProseThead-60b3004c.mjs').then((r) => r.default));
 const LazyProseTr = defineAsyncComponent(() => import('./_nuxt/ProseTr-d81a1e8c.mjs').then((r) => r.default));
 const LazyProseUl = defineAsyncComponent(() => import('./_nuxt/ProseUl-d6f6ad9d.mjs').then((r) => r.default));
-const LazyIcon = defineAsyncComponent(() => import('./_nuxt/Icon-d0407aea.mjs').then((r) => r.default));
-const LazyIconCSS = defineAsyncComponent(() => import('./_nuxt/IconCSS-66b4db84.mjs').then((r) => r.default));
+const LazyIcon = defineAsyncComponent(() => import('./_nuxt/Icon-4357aa19.mjs').then((r) => r.default));
+const LazyIconCSS = defineAsyncComponent(() => import('./_nuxt/IconCSS-5fb228ca.mjs').then((r) => r.default));
 const lazyGlobalComponents = [
   ["ContentDoc", LazyContentDoc],
   ["ContentList", LazyContentList],
@@ -1021,13 +1045,133 @@ const components_plugin_KR1HBZs4kY = /* @__PURE__ */ defineNuxtPlugin({
     }
   }
 });
+const isString = (val) => typeof val === "string";
+const noop = () => {
+};
 const rand = (min, max) => {
   min = Math.ceil(min);
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min + 1)) + min;
 };
+function resolveUnref(r) {
+  return typeof r === "function" ? r() : unref(r);
+}
 function identity(arg) {
   return arg;
+}
+function tryOnScopeDispose(fn) {
+  if (getCurrentScope()) {
+    onScopeDispose(fn);
+    return true;
+  }
+  return false;
+}
+function tryOnMounted(fn, sync = true) {
+  if (getCurrentInstance())
+    ;
+  else if (sync)
+    fn();
+  else
+    nextTick(fn);
+}
+function unrefElement(elRef) {
+  var _a;
+  const plain = resolveUnref(elRef);
+  return (_a = plain == null ? void 0 : plain.$el) != null ? _a : plain;
+}
+const defaultWindow = void 0;
+const defaultDocument = void 0;
+function useEventListener(...args) {
+  let target;
+  let events2;
+  let listeners;
+  let options;
+  if (isString(args[0]) || Array.isArray(args[0])) {
+    [events2, listeners, options] = args;
+    target = defaultWindow;
+  } else {
+    [target, events2, listeners, options] = args;
+  }
+  if (!target)
+    return noop;
+  if (!Array.isArray(events2))
+    events2 = [events2];
+  if (!Array.isArray(listeners))
+    listeners = [listeners];
+  const cleanups = [];
+  const cleanup = () => {
+    cleanups.forEach((fn) => fn());
+    cleanups.length = 0;
+  };
+  const register = (el, event, listener, options2) => {
+    el.addEventListener(event, listener, options2);
+    return () => el.removeEventListener(event, listener, options2);
+  };
+  const stopWatch = watch(() => [unrefElement(target), resolveUnref(options)], ([el, options2]) => {
+    cleanup();
+    if (!el)
+      return;
+    cleanups.push(...events2.flatMap((event) => {
+      return listeners.map((listener) => register(el, event, listener, options2));
+    }));
+  }, { immediate: true, flush: "post" });
+  const stop = () => {
+    stopWatch();
+    cleanup();
+  };
+  tryOnScopeDispose(stop);
+  return stop;
+}
+function onClickOutside(target, handler, options = {}) {
+  const { window: window2 = defaultWindow, ignore = [], capture = true, detectIframe = false } = options;
+  if (!window2)
+    return;
+  let shouldListen = true;
+  const shouldIgnore = (event) => {
+    return ignore.some((target2) => {
+      if (typeof target2 === "string") {
+        return Array.from(window2.document.querySelectorAll(target2)).some((el) => el === event.target || event.composedPath().includes(el));
+      } else {
+        const el = unrefElement(target2);
+        return el && (event.target === el || event.composedPath().includes(el));
+      }
+    });
+  };
+  const listener = (event) => {
+    const el = unrefElement(target);
+    if (!el || el === event.target || event.composedPath().includes(el))
+      return;
+    if (event.detail === 0)
+      shouldListen = !shouldIgnore(event);
+    if (!shouldListen) {
+      shouldListen = true;
+      return;
+    }
+    handler(event);
+  };
+  const cleanup = [
+    useEventListener(window2, "click", listener, { passive: true, capture }),
+    useEventListener(window2, "pointerdown", (e) => {
+      const el = unrefElement(target);
+      if (el)
+        shouldListen = !e.composedPath().includes(el) && !shouldIgnore(e);
+    }, { passive: true }),
+    detectIframe && useEventListener(window2, "blur", (event) => {
+      var _a;
+      const el = unrefElement(target);
+      if (((_a = window2.document.activeElement) == null ? void 0 : _a.tagName) === "IFRAME" && !(el == null ? void 0 : el.contains(window2.document.activeElement)))
+        handler(event);
+    })
+  ].filter(Boolean);
+  const stop = () => cleanup.forEach((fn) => fn());
+  return stop;
+}
+function useSupported(callback, sync = false) {
+  const isSupported = ref();
+  const update = () => isSupported.value = Boolean(callback());
+  update();
+  tryOnMounted(update, sync);
+  return isSupported;
 }
 const breakpointsBootstrapV5 = {
   sm: 576,
@@ -1039,6 +1183,103 @@ const breakpointsBootstrapV5 = {
 const _global = typeof globalThis !== "undefined" ? globalThis : typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : {};
 const globalKey = "__vueuse_ssr_handlers__";
 _global[globalKey] = _global[globalKey] || {};
+function useElementHover(el, options = {}) {
+  const delayEnter = options ? options.delayEnter : 0;
+  const delayLeave = options ? options.delayLeave : 0;
+  const isHovered = ref(false);
+  let timer;
+  const toggle = (entering) => {
+    const delay = entering ? delayEnter : delayLeave;
+    if (timer) {
+      clearTimeout(timer);
+      timer = void 0;
+    }
+    if (delay)
+      timer = setTimeout(() => isHovered.value = entering, delay);
+    else
+      isHovered.value = entering;
+  };
+  if (!window)
+    return isHovered;
+  useEventListener(el, "mouseenter", () => toggle(true), { passive: true });
+  useEventListener(el, "mouseleave", () => toggle(false), { passive: true });
+  return isHovered;
+}
+const events = /* @__PURE__ */ new Map();
+function useEventBus(key) {
+  const scope = getCurrentScope();
+  function on(listener) {
+    var _a;
+    const listeners = events.get(key) || [];
+    listeners.push(listener);
+    events.set(key, listeners);
+    const _off = () => off(listener);
+    (_a = scope == null ? void 0 : scope.cleanups) == null ? void 0 : _a.push(_off);
+    return _off;
+  }
+  function once(listener) {
+    function _listener(...args) {
+      off(_listener);
+      listener(...args);
+    }
+    return on(_listener);
+  }
+  function off(listener) {
+    const listeners = events.get(key);
+    if (!listeners)
+      return;
+    const index = listeners.indexOf(listener);
+    if (index > -1)
+      listeners.splice(index, 1);
+    if (!listeners.length)
+      events.delete(key);
+  }
+  function reset() {
+    events.delete(key);
+  }
+  function emit(event, payload) {
+    var _a;
+    (_a = events.get(key)) == null ? void 0 : _a.forEach((v) => v(event, payload));
+  }
+  return { on, once, off, emit, reset };
+}
+function useIntersectionObserver(target, callback, options = {}) {
+  const {
+    root,
+    rootMargin = "0px",
+    threshold = 0.1,
+    window: window2 = defaultWindow
+  } = options;
+  const isSupported = useSupported(() => window2 && "IntersectionObserver" in window2);
+  let cleanup = noop;
+  const stopWatch = isSupported.value ? watch(() => ({
+    el: unrefElement(target),
+    root: unrefElement(root)
+  }), ({ el, root: root2 }) => {
+    cleanup();
+    if (!el)
+      return;
+    const observer = new IntersectionObserver(callback, {
+      root: root2,
+      rootMargin,
+      threshold
+    });
+    observer.observe(el);
+    cleanup = () => {
+      observer.disconnect();
+      cleanup = noop;
+    };
+  }, { immediate: true, flush: "post" }) : noop;
+  const stop = () => {
+    cleanup();
+    stopWatch();
+  };
+  tryOnScopeDispose(stop);
+  return {
+    isSupported,
+    stop
+  };
+}
 var SwipeDirection;
 (function(SwipeDirection2) {
   SwipeDirection2["UP"] = "UP";
@@ -1097,8 +1338,104 @@ function startsWithBreakPoint(value) {
     (breakpoint) => value.startsWith(breakpoint)
   ) >= 0;
 }
+function hProps(...items) {
+  const result = {
+    class: {},
+    style: {}
+  };
+  const events2 = /* @__PURE__ */ new Map();
+  items.forEach((item) => {
+    result.class && Object.assign(result.class, unref(item.class));
+    result.style && Object.assign(result.style, unref(item.style));
+    Object.assign(result, unref(item.attr));
+    if (item.ref) {
+      set(result, "ref", item.ref);
+    }
+    forOwn(item.event, (value, key) => {
+      var _a;
+      if (events2.has(key)) {
+        (_a = events2.get(key)) == null ? void 0 : _a.push(value);
+      } else {
+        const funcs = [value];
+        events2.set(key, funcs);
+        const val = (payload) => {
+          var _a2;
+          (_a2 = events2.get(key)) == null ? void 0 : _a2.forEach((func) => func(payload));
+        };
+        result[key] = val;
+      }
+    });
+  });
+  if (result.class && isEmpty(pickBy(result.class))) {
+    delete result.class;
+  }
+  if (result.style && isEmpty(pickBy(result.style))) {
+    delete result.style;
+  }
+  return result;
+}
+function hSlots(...slots) {
+  return slots.map((value) => {
+    return value ? value() : void 0;
+  });
+}
+function addClassNames(value, func) {
+  const classObject = {};
+  const values = toArray(value);
+  values.forEach((n) => {
+    classObject[func(n)] = true;
+  });
+  return classObject;
+}
+function addProp(test, name, value) {
+  return ((test || isNumber(test)) && value ? true : false) && { [name]: value };
+}
+function isPropUndefined(value) {
+  return !isString$1(value) && (value == void 0 || value == false);
+}
+function isPropDefined(value) {
+  return !isPropUndefined(value);
+}
 function isNumrable(value) {
   return !isNaN(parseInt(value));
+}
+function hasValue(value) {
+  return isString$1(value) && value || isNumber(value) || isArray(value);
+}
+function toArray(value) {
+  if (isArray(value)) {
+    return value;
+  }
+  if (isString$1(value)) {
+    return value.split(" ").filter((item) => item);
+  }
+  if (value == void 0 || value == false) {
+    return [];
+  }
+  return [value];
+}
+function exposeMethods(context, ...items) {
+  const result = {};
+  const methods = /* @__PURE__ */ new Map();
+  items.forEach((item) => {
+    forOwn(item.method, (value, key) => {
+      var _a;
+      if (methods.has(key)) {
+        (_a = methods.get(key)) == null ? void 0 : _a.push(value);
+      } else {
+        const funcs = [value];
+        methods.set(key, funcs);
+        const val = (...payloads) => {
+          var _a2;
+          (_a2 = methods.get(key)) == null ? void 0 : _a2.forEach((func) => func(payloads));
+        };
+        result[key] = val;
+      }
+    });
+  });
+  if (!isEmpty(result)) {
+    context.expose(result);
+  }
 }
 function spacing(val, tag) {
   if (isNumrable(val)) {
@@ -1158,7 +1495,7 @@ const _wrapIf = (component, props, slots) => {
   } };
 };
 const layouts = {
-  default: () => import('./_nuxt/default-682e9037.mjs').then((m) => m.default || m)
+  default: () => import('./_nuxt/default-d233115c.mjs').then((m) => m.default || m)
 };
 const LayoutLoader = /* @__PURE__ */ defineComponent({
   name: "LayoutLoader",
@@ -1393,11 +1730,24 @@ const _export_sfc = (sfc, props) => {
   }
   return target;
 };
+const _sfc_main$3 = {};
+function _sfc_ssrRender$1(_ctx, _push, _parent, _attrs) {
+  _push(`<div${ssrRenderAttrs(mergeProps({ class: "container pb-4" }, _attrs))}><footer><h1>©２０２３</h1></footer></div>`);
+}
+const _sfc_setup$3 = _sfc_main$3.setup;
+_sfc_main$3.setup = (props, ctx) => {
+  const ssrContext = useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/AppFooter.vue");
+  return _sfc_setup$3 ? _sfc_setup$3(props, ctx) : void 0;
+};
+const __nuxt_component_2 = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["ssrRender", _sfc_ssrRender$1]]);
 const _sfc_main$2 = {};
 function _sfc_ssrRender(_ctx, _push, _parent, _attrs) {
   const _component_NuxtLayout = __nuxt_component_0;
   const _component_NuxtPage = __nuxt_component_1;
-  _push(ssrRenderComponent(_component_NuxtLayout, _attrs, {
+  const _component_AppFooter = __nuxt_component_2;
+  _push(`<!--[-->`);
+  _push(ssrRenderComponent(_component_NuxtLayout, null, {
     default: withCtx((_, _push2, _parent2, _scopeId) => {
       if (_push2) {
         _push2(ssrRenderComponent(_component_NuxtPage, null, null, _parent2, _scopeId));
@@ -1409,6 +1759,8 @@ function _sfc_ssrRender(_ctx, _push, _parent, _attrs) {
     }),
     _: 1
   }, _parent));
+  _push(ssrRenderComponent(_component_AppFooter, null, null, _parent));
+  _push(`<!--]-->`);
 }
 const _sfc_setup$2 = _sfc_main$2.setup;
 _sfc_main$2.setup = (props, ctx) => {
@@ -1438,8 +1790,8 @@ const _sfc_main$1 = {
     const statusMessage = _error.statusMessage ?? (is404 ? "Page Not Found" : "Internal Server Error");
     const description = _error.message || _error.toString();
     const stack = void 0;
-    const _Error404 = /* @__PURE__ */ defineAsyncComponent(() => import('./_nuxt/error-404-34a27a16.mjs').then((r) => r.default || r));
-    const _Error = /* @__PURE__ */ defineAsyncComponent(() => import('./_nuxt/error-500-ecfb9d0d.mjs').then((r) => r.default || r));
+    const _Error404 = /* @__PURE__ */ defineAsyncComponent(() => import('./_nuxt/error-404-544c111c.mjs').then((r) => r.default || r));
+    const _Error = /* @__PURE__ */ defineAsyncComponent(() => import('./_nuxt/error-500-648ee8fc.mjs').then((r) => r.default || r));
     const ErrorTemplate = is404 ? _Error404 : _Error;
     return (_ctx, _push, _parent, _attrs) => {
       _push(ssrRenderComponent(unref(ErrorTemplate), mergeProps({ statusCode: unref(statusCode), statusMessage: unref(statusMessage), description: unref(description), stack: unref(stack) }, _attrs), null, _parent));
@@ -1524,5 +1876,5 @@ let entry;
 }
 const entry$1 = (ctx) => entry(ctx);
 
-export { _export_sfc as _, useRuntimeConfig as a, resolveUnrefHeadInput as b, createError as c, asyncDataDefaults as d, entry$1 as default, useNuxtApp as e, useRouter as f, navigateTo as g, injectHead as i, nuxtLinkDefaults as n, rand as r, useRoute as u };
+export { navigateTo as A, _export_sfc as _, addProp as a, hSlots as b, createError as c, useRuntimeConfig as d, entry$1 as default, useNuxtApp as e, hasValue as f, exposeMethods as g, hProps as h, useEventBus as i, unrefElement as j, isPropDefined as k, addClassNames as l, useRoute as m, defaultDocument as n, onClickOutside as o, isPropUndefined as p, useIntersectionObserver as q, rand as r, spacing as s, toArray as t, useElementHover as u, injectHead as v, resolveUnrefHeadInput as w, asyncDataDefaults as x, useRouter as y, nuxtLinkDefaults as z };
 //# sourceMappingURL=server.mjs.map
