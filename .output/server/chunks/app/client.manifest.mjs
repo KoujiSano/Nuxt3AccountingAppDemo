@@ -6,19 +6,19 @@ const client_manifest = {
     "file": "ProsePre.e63e49c6.css",
     "src": "ProseCode.css"
   },
-  "_ContentRendererMarkdown.vue.82b700c9.js": {
+  "_ContentRendererMarkdown.vue.05fd3f57.js": {
     "resourceType": "script",
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "ContentRendererMarkdown.vue.82b700c9.js",
+    "file": "ContentRendererMarkdown.vue.05fd3f57.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js",
       "_index.288f722b.js",
-      "_preview.453b1654.js"
+      "_preview.f493e6ea.js"
     ]
   },
-  "_ProseCode.vue.15ab66e0.js": {
+  "_ProseCode.vue.d71f018c.js": {
     "resourceType": "script",
     "module": true,
     "prefetch": true,
@@ -26,7 +26,7 @@ const client_manifest = {
     "css": [
       "ProsePre.e63e49c6.css"
     ],
-    "file": "ProseCode.vue.15ab66e0.js",
+    "file": "ProseCode.vue.d71f018c.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ]
@@ -37,6 +37,39 @@ const client_manifest = {
     "prefetch": true,
     "preload": true
   },
+  "_bslink.bb099a4b.js": {
+    "resourceType": "script",
+    "module": true,
+    "prefetch": true,
+    "preload": true,
+    "file": "bslink.bb099a4b.js",
+    "imports": [
+      "node_modules/nuxt/dist/app/entry.js",
+      "_nuxt-link.15f2202e.js"
+    ]
+  },
+  "_container.6f62eb70.js": {
+    "resourceType": "script",
+    "module": true,
+    "prefetch": true,
+    "preload": true,
+    "file": "container.6f62eb70.js",
+    "imports": [
+      "node_modules/nuxt/dist/app/entry.js",
+      "_bslink.bb099a4b.js"
+    ]
+  },
+  "_dropdown.c1e26fa0.js": {
+    "resourceType": "script",
+    "module": true,
+    "prefetch": true,
+    "preload": true,
+    "file": "dropdown.c1e26fa0.js",
+    "imports": [
+      "node_modules/nuxt/dist/app/entry.js",
+      "_bslink.bb099a4b.js"
+    ]
+  },
   "_index.288f722b.js": {
     "resourceType": "script",
     "module": true,
@@ -44,27 +77,27 @@ const client_manifest = {
     "preload": true,
     "file": "index.288f722b.js"
   },
-  "_nuxt-link.7d6bd2ab.js": {
+  "_nuxt-link.15f2202e.js": {
     "resourceType": "script",
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "nuxt-link.7d6bd2ab.js",
+    "file": "nuxt-link.15f2202e.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ]
   },
-  "_preview.453b1654.js": {
+  "_preview.f493e6ea.js": {
     "resourceType": "script",
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "preview.453b1654.js",
+    "file": "preview.f493e6ea.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ]
   },
-  "_query.0928dad6.js": {
+  "_query.c7b98fac.js": {
     "resourceType": "script",
     "module": true,
     "prefetch": true,
@@ -72,59 +105,73 @@ const client_manifest = {
     "dynamicImports": [
       "node_modules/@nuxt/content/dist/runtime/legacy/composables/client-db.mjs"
     ],
-    "file": "query.0928dad6.js",
+    "file": "query.c7b98fac.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js",
-      "_preview.453b1654.js"
+      "_preview.f493e6ea.js"
     ]
   },
-  "_state.db80aa5f.js": {
+  "_state.dfebfa85.js": {
     "resourceType": "script",
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "state.db80aa5f.js",
+    "file": "state.dfebfa85.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ]
   },
-  "_vue.f36acd1f.f53a76e9.js": {
+  "_vue.f36acd1f.2ba4c7a3.js": {
     "resourceType": "script",
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "vue.f36acd1f.f53a76e9.js",
+    "file": "vue.f36acd1f.2ba4c7a3.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ]
+  },
+  "layouts/default.css": {
+    "resourceType": "style",
+    "prefetch": true,
+    "preload": true,
+    "file": "default.8e8661c5.css",
+    "src": "layouts/default.css"
   },
   "layouts/default.vue": {
     "resourceType": "script",
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "default.ac1a05a7.js",
+    "css": [],
+    "file": "default.f0b6fd4c.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ],
     "isDynamicEntry": true,
     "src": "layouts/default.vue"
   },
+  "default.8e8661c5.css": {
+    "file": "default.8e8661c5.css",
+    "resourceType": "style",
+    "prefetch": true,
+    "preload": true
+  },
   "node_modules/@nuxt/content/dist/runtime/components/ContentDoc.vue": {
     "resourceType": "script",
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "ContentDoc.ee6a99fa.js",
+    "file": "ContentDoc.5dd3473d.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js",
-      "_vue.f36acd1f.f53a76e9.js",
+      "_vue.f36acd1f.2ba4c7a3.js",
       "node_modules/@nuxt/content/dist/runtime/components/ContentRenderer.vue",
       "node_modules/@nuxt/content/dist/runtime/components/ContentQuery.vue",
-      "_ContentRendererMarkdown.vue.82b700c9.js",
+      "_ContentRendererMarkdown.vue.05fd3f57.js",
       "_index.288f722b.js",
-      "_preview.453b1654.js",
-      "_query.0928dad6.js"
+      "_preview.f493e6ea.js",
+      "_query.c7b98fac.js"
     ],
     "isDynamicEntry": true,
     "src": "node_modules/@nuxt/content/dist/runtime/components/ContentDoc.vue"
@@ -134,12 +181,12 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "ContentList.1e94dab8.js",
+    "file": "ContentList.f7686000.js",
     "imports": [
       "node_modules/@nuxt/content/dist/runtime/components/ContentQuery.vue",
       "node_modules/nuxt/dist/app/entry.js",
-      "_query.0928dad6.js",
-      "_preview.453b1654.js"
+      "_query.c7b98fac.js",
+      "_preview.f493e6ea.js"
     ],
     "isDynamicEntry": true,
     "src": "node_modules/@nuxt/content/dist/runtime/components/ContentList.vue"
@@ -152,13 +199,13 @@ const client_manifest = {
     "dynamicImports": [
       "node_modules/@nuxt/content/dist/runtime/legacy/composables/client-db.mjs"
     ],
-    "file": "ContentNavigation.2223a915.js",
+    "file": "ContentNavigation.32df7cef.js",
     "imports": [
-      "_query.0928dad6.js",
-      "_state.db80aa5f.js",
-      "_nuxt-link.7d6bd2ab.js",
+      "_query.c7b98fac.js",
+      "_state.dfebfa85.js",
+      "_nuxt-link.15f2202e.js",
       "node_modules/nuxt/dist/app/entry.js",
-      "_preview.453b1654.js"
+      "_preview.f493e6ea.js"
     ],
     "isDynamicEntry": true,
     "src": "node_modules/@nuxt/content/dist/runtime/components/ContentNavigation.vue"
@@ -168,11 +215,11 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "ContentQuery.5037e13b.js",
+    "file": "ContentQuery.eb86610b.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js",
-      "_query.0928dad6.js",
-      "_preview.453b1654.js"
+      "_query.c7b98fac.js",
+      "_preview.f493e6ea.js"
     ],
     "isDynamicEntry": true,
     "src": "node_modules/@nuxt/content/dist/runtime/components/ContentQuery.vue"
@@ -182,12 +229,12 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "ContentRenderer.f9ca5978.js",
+    "file": "ContentRenderer.3d3b0d39.js",
     "imports": [
-      "_ContentRendererMarkdown.vue.82b700c9.js",
+      "_ContentRendererMarkdown.vue.05fd3f57.js",
       "node_modules/nuxt/dist/app/entry.js",
       "_index.288f722b.js",
-      "_preview.453b1654.js"
+      "_preview.f493e6ea.js"
     ],
     "isDynamicEntry": true,
     "src": "node_modules/@nuxt/content/dist/runtime/components/ContentRenderer.vue"
@@ -197,12 +244,12 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "ContentRendererMarkdown.bc41e0d9.js",
+    "file": "ContentRendererMarkdown.38550ff5.js",
     "imports": [
-      "_ContentRendererMarkdown.vue.82b700c9.js",
+      "_ContentRendererMarkdown.vue.05fd3f57.js",
       "node_modules/nuxt/dist/app/entry.js",
       "_index.288f722b.js",
-      "_preview.453b1654.js"
+      "_preview.f493e6ea.js"
     ],
     "isDynamicEntry": true,
     "src": "node_modules/@nuxt/content/dist/runtime/components/ContentRendererMarkdown.vue"
@@ -212,7 +259,7 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "ContentSlot.a2a08584.js",
+    "file": "ContentSlot.56aa7b40.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ],
@@ -224,7 +271,7 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "DocumentDrivenEmpty.651dfd6d.js",
+    "file": "DocumentDrivenEmpty.2088b754.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ],
@@ -236,7 +283,7 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "DocumentDrivenNotFound.fd11d8a8.js",
+    "file": "DocumentDrivenNotFound.b0d2a01b.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ],
@@ -248,7 +295,7 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "Markdown.76079aa3.js",
+    "file": "Markdown.c7364441.js",
     "imports": [
       "node_modules/@nuxt/content/dist/runtime/components/ContentSlot.vue",
       "node_modules/nuxt/dist/app/entry.js"
@@ -261,9 +308,9 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "ProseCode.72ca6e0b.js",
+    "file": "ProseCode.e2287ed3.js",
     "imports": [
-      "_ProseCode.vue.15ab66e0.js",
+      "_ProseCode.vue.d71f018c.js",
       "node_modules/nuxt/dist/app/entry.js"
     ],
     "isDynamicEntry": true,
@@ -274,7 +321,7 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "ProseCodeInline.80552e24.js",
+    "file": "ProseCodeInline.fcab3f41.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ],
@@ -294,9 +341,9 @@ const client_manifest = {
     "prefetch": true,
     "preload": true,
     "css": [],
-    "file": "ProsePre.b62d8224.js",
+    "file": "ProsePre.ef4d8ced.js",
     "imports": [
-      "_ProseCode.vue.15ab66e0.js",
+      "_ProseCode.vue.d71f018c.js",
       "node_modules/nuxt/dist/app/entry.js"
     ],
     "isDynamicEntry": true,
@@ -307,12 +354,12 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "client-db.1372d41f.js",
+    "file": "client-db.8728e90d.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js",
-      "_query.0928dad6.js",
+      "_query.c7b98fac.js",
       "_index.288f722b.js",
-      "_preview.453b1654.js"
+      "_preview.f493e6ea.js"
     ],
     "isDynamicEntry": true,
     "src": "node_modules/@nuxt/content/dist/runtime/legacy/composables/client-db.mjs"
@@ -330,10 +377,10 @@ const client_manifest = {
     "prefetch": true,
     "preload": true,
     "css": [],
-    "file": "error-404.c71138d7.js",
+    "file": "error-404.449083cc.js",
     "imports": [
-      "_nuxt-link.7d6bd2ab.js",
-      "_vue.f36acd1f.f53a76e9.js",
+      "_nuxt-link.15f2202e.js",
+      "_vue.f36acd1f.2ba4c7a3.js",
       "node_modules/nuxt/dist/app/entry.js"
     ],
     "isDynamicEntry": true,
@@ -358,9 +405,9 @@ const client_manifest = {
     "prefetch": true,
     "preload": true,
     "css": [],
-    "file": "error-500.fbede836.js",
+    "file": "error-500.9fd0dcc7.js",
     "imports": [
-      "_vue.f36acd1f.f53a76e9.js",
+      "_vue.f36acd1f.2ba4c7a3.js",
       "node_modules/nuxt/dist/app/entry.js"
     ],
     "isDynamicEntry": true,
@@ -377,9 +424,9 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "ProseA.ed31600f.js",
+    "file": "ProseA.98bd85a5.js",
     "imports": [
-      "_nuxt-link.7d6bd2ab.js",
+      "_nuxt-link.15f2202e.js",
       "node_modules/nuxt/dist/app/entry.js"
     ],
     "isDynamicEntry": true,
@@ -390,7 +437,7 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "ProseBlockquote.bbfe429d.js",
+    "file": "ProseBlockquote.bbdb3454.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ],
@@ -402,7 +449,7 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "ProseEm.3e1d5b47.js",
+    "file": "ProseEm.2c4fb5ce.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ],
@@ -414,7 +461,7 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "ProseH1.af096f2f.js",
+    "file": "ProseH1.df794a3c.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ],
@@ -426,7 +473,7 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "ProseH2.981a8579.js",
+    "file": "ProseH2.c31d2ab5.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ],
@@ -438,7 +485,7 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "ProseH3.a393ab66.js",
+    "file": "ProseH3.f987822e.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ],
@@ -450,7 +497,7 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "ProseH4.30813d93.js",
+    "file": "ProseH4.c372ff54.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ],
@@ -462,7 +509,7 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "ProseH5.55a0e5c8.js",
+    "file": "ProseH5.205e3d6a.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ],
@@ -474,7 +521,7 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "ProseH6.37002948.js",
+    "file": "ProseH6.d547a43d.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ],
@@ -486,7 +533,7 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "ProseHr.5e556306.js",
+    "file": "ProseHr.2bce930b.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ],
@@ -498,7 +545,7 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "ProseImg.a686c298.js",
+    "file": "ProseImg.4c0e0b8f.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ],
@@ -510,7 +557,7 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "ProseLi.9e578b96.js",
+    "file": "ProseLi.d392fb31.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ],
@@ -522,7 +569,7 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "ProseOl.cd047f41.js",
+    "file": "ProseOl.655c142e.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ],
@@ -534,7 +581,7 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "ProseP.e1eda3c7.js",
+    "file": "ProseP.980c4dc6.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ],
@@ -546,7 +593,7 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "ProseStrong.6c88bb15.js",
+    "file": "ProseStrong.a6f9008a.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ],
@@ -558,7 +605,7 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "ProseTable.80a38480.js",
+    "file": "ProseTable.017764c9.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ],
@@ -570,7 +617,7 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "ProseTbody.1bc9e85b.js",
+    "file": "ProseTbody.45140a1a.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ],
@@ -582,7 +629,7 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "ProseTd.ec68b089.js",
+    "file": "ProseTd.1f56e1b6.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ],
@@ -594,7 +641,7 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "ProseTh.292bf769.js",
+    "file": "ProseTh.85680604.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ],
@@ -606,7 +653,7 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "ProseThead.e395d097.js",
+    "file": "ProseThead.f18d0ca7.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ],
@@ -618,7 +665,7 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "ProseTr.345730c9.js",
+    "file": "ProseTr.555edfd3.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ],
@@ -630,7 +677,7 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "ProseUl.10adc98c.js",
+    "file": "ProseUl.e0f37640.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ],
@@ -650,10 +697,10 @@ const client_manifest = {
     "prefetch": true,
     "preload": true,
     "css": [],
-    "file": "Icon.a7a58710.js",
+    "file": "Icon.cb0d9bfa.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js",
-      "_state.db80aa5f.js"
+      "_state.dfebfa85.js"
     ],
     "isDynamicEntry": true,
     "src": "node_modules/nuxt-icon/dist/runtime/Icon.vue"
@@ -677,7 +724,7 @@ const client_manifest = {
     "prefetch": true,
     "preload": true,
     "css": [],
-    "file": "IconCSS.2dbeb67c.js",
+    "file": "IconCSS.451b01df.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ],
@@ -690,59 +737,107 @@ const client_manifest = {
     "prefetch": true,
     "preload": true
   },
+  "node_modules/nuxt/dist/app/entry.css": {
+    "resourceType": "style",
+    "prefetch": true,
+    "preload": true,
+    "file": "entry.81f72636.css",
+    "src": "node_modules/nuxt/dist/app/entry.css"
+  },
   "node_modules/nuxt/dist/app/entry.js": {
     "resourceType": "script",
     "module": true,
     "prefetch": true,
     "preload": true,
+    "css": [
+      "entry.81f72636.css"
+    ],
     "dynamicImports": [
       "layouts/default.vue",
       "node_modules/@nuxt/ui-templates/dist/templates/error-404.vue",
       "node_modules/@nuxt/ui-templates/dist/templates/error-500.vue"
     ],
-    "file": "entry.cd1a28ea.js",
+    "file": "entry.6da81ce3.js",
     "isEntry": true,
     "src": "node_modules/nuxt/dist/app/entry.js",
     "_globalCSS": true
   },
-  "pages/KessanHoukoku.vue": {
-    "resourceType": "script",
-    "module": true,
+  "entry.81f72636.css": {
+    "file": "entry.81f72636.css",
+    "resourceType": "style",
     "prefetch": true,
-    "preload": true,
-    "file": "KessanHoukoku.8c141030.js",
-    "imports": [
-      "node_modules/nuxt/dist/app/entry.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "pages/KessanHoukoku.vue"
+    "preload": true
   },
   "pages/[...slug].vue": {
     "resourceType": "script",
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "_...slug_.88880e96.js",
+    "file": "_...slug_.2749b314.js",
     "imports": [
       "node_modules/@nuxt/content/dist/runtime/components/ContentDoc.vue",
       "node_modules/nuxt/dist/app/entry.js",
-      "_vue.f36acd1f.f53a76e9.js",
+      "_vue.f36acd1f.2ba4c7a3.js",
       "node_modules/@nuxt/content/dist/runtime/components/ContentRenderer.vue",
-      "_ContentRendererMarkdown.vue.82b700c9.js",
+      "_ContentRendererMarkdown.vue.05fd3f57.js",
       "_index.288f722b.js",
-      "_preview.453b1654.js",
+      "_preview.f493e6ea.js",
       "node_modules/@nuxt/content/dist/runtime/components/ContentQuery.vue",
-      "_query.0928dad6.js"
+      "_query.c7b98fac.js"
     ],
     "isDynamicEntry": true,
     "src": "pages/[...slug].vue"
+  },
+  "pages/demo/BasicInformationSetting/AccountItem.vue": {
+    "resourceType": "script",
+    "module": true,
+    "prefetch": true,
+    "preload": true,
+    "file": "AccountItem.83b24cf1.js",
+    "imports": [
+      "node_modules/nuxt/dist/app/entry.js",
+      "_bslink.bb099a4b.js",
+      "_vue.f36acd1f.2ba4c7a3.js",
+      "_container.6f62eb70.js",
+      "_nuxt-link.15f2202e.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "pages/demo/BasicInformationSetting/AccountItem.vue"
+  },
+  "pages/demo/Darkness_KessanHoukoku_MARK_V1_mp5/KessanHoukoku.vue": {
+    "resourceType": "script",
+    "module": true,
+    "prefetch": true,
+    "preload": true,
+    "file": "KessanHoukoku.89adec43.js",
+    "imports": [
+      "node_modules/nuxt/dist/app/entry.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "pages/demo/Darkness_KessanHoukoku_MARK_V1_mp5/KessanHoukoku.vue"
+  },
+  "pages/demo/Whiteshining_SeikisiSoukanteiMotocho_XxPROxX_Mrk2_mp4/soukantei.vue": {
+    "resourceType": "script",
+    "module": true,
+    "prefetch": true,
+    "preload": true,
+    "file": "soukantei.29c47409.js",
+    "imports": [
+      "node_modules/nuxt/dist/app/entry.js",
+      "_bslink.bb099a4b.js",
+      "_dropdown.c1e26fa0.js",
+      "_container.6f62eb70.js",
+      "_nuxt-link.15f2202e.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "pages/demo/Whiteshining_SeikisiSoukanteiMotocho_XxPROxX_Mrk2_mp4/soukantei.vue"
   },
   "pages/demo/accountconfig.vue": {
     "resourceType": "script",
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "accountconfig.e8f2f528.js",
+    "file": "accountconfig.8792eede.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ],
@@ -754,7 +849,7 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "accountinginfoconfig.c41e7020.js",
+    "file": "accountinginfoconfig.bfe41f4a.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ],
@@ -766,7 +861,7 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "accountledger.aaf690cc.js",
+    "file": "accountledger.2a99d20d.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ],
@@ -778,7 +873,7 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "journalbook.89f64fd5.js",
+    "file": "journalbook.87ff6cef.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ],
@@ -790,9 +885,9 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "game.6ad4647f.js",
+    "file": "game.76287f00.js",
     "imports": [
-      "_state.db80aa5f.js",
+      "_state.dfebfa85.js",
       "node_modules/nuxt/dist/app/entry.js"
     ],
     "isDynamicEntry": true,
@@ -803,21 +898,36 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "grid.d543b2a8.js",
+    "file": "grid.ee3f9376.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ],
     "isDynamicEntry": true,
     "src": "pages/demo/grid.vue"
   },
+  "pages/demo/hojomototyou/subledger.vue": {
+    "resourceType": "script",
+    "module": true,
+    "prefetch": true,
+    "preload": true,
+    "file": "subledger.91025914.js",
+    "imports": [
+      "_bslink.bb099a4b.js",
+      "node_modules/nuxt/dist/app/entry.js",
+      "_dropdown.c1e26fa0.js",
+      "_nuxt-link.15f2202e.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "pages/demo/hojomototyou/subledger.vue"
+  },
   "pages/demo/home.vue": {
     "resourceType": "script",
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "home.111b7ba0.js",
+    "file": "home.45505fec.js",
     "imports": [
-      "_nuxt-link.7d6bd2ab.js",
+      "_nuxt-link.15f2202e.js",
       "node_modules/nuxt/dist/app/entry.js"
     ],
     "isDynamicEntry": true,
@@ -828,7 +938,7 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "multientry.7e8c22b7.js",
+    "file": "multientry.f1c5b485.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ],
@@ -840,9 +950,9 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "recipe.0a0d5419.js",
+    "file": "recipe.1b5cacfd.js",
     "imports": [
-      "_state.db80aa5f.js",
+      "_state.dfebfa85.js",
       "node_modules/nuxt/dist/app/entry.js"
     ],
     "isDynamicEntry": true,
@@ -853,9 +963,9 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "index.413bea2c.js",
+    "file": "index.3007244e.js",
     "imports": [
-      "_nuxt-link.7d6bd2ab.js",
+      "_nuxt-link.15f2202e.js",
       "node_modules/nuxt/dist/app/entry.js"
     ],
     "isDynamicEntry": true,

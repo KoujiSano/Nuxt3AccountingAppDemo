@@ -1,0 +1,1 @@
+import{_ as t}from"./nuxt-link.15f2202e.js";import{_ as o,c,b as n,w as s,o as _,d as a}from"./entry.6da81ce3.js";const r={},d={class:"container"};function i(m,f){const e=t;return _(),c("div",d,[n(e,{to:"/demo/home",class:""},{default:s(()=>[a("会計アプリ")]),_:1})])}const p=o(r,[["render",i]]);export{p as default};
