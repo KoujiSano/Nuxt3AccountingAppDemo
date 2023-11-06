@@ -6,7 +6,8 @@
           <div class="card-header">各種入力</div>
           <ul class="list-group list-group-flush">
             <li class="list-group-item"><NuxtLink to="/demo/complex-journal/complex" class="card-link">複合仕訳入力</NuxtLink></li>
-          </ul>
+            <li class="list-group-item"><NuxtLink to="/pages/demo/passbook/passbook" class="card-link">通帳入力</NuxtLink></li>
+        </ul>
         </div>
       </div>
       <div class="col">
