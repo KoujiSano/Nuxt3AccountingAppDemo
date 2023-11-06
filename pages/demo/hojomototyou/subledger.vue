@@ -128,6 +128,9 @@
             size="lg"
             type="button"
             relative-width="25"
+            shadow
+            padding="3"
+            margin="b-5"
             class="p-3"
             >
             表示
