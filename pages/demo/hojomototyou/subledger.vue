@@ -74,29 +74,29 @@
                         name="flexRadioDefault"
                         />
                         <BFormCheckLabel>全件</BFormCheckLabel>
-                        </BFormCheck>
-                        <BFormCheck>
-                            <BFormCheckInput
-                            type="radio"
-                            name="flexRadioDefault"
-                            checked
-                            />
-                            <BFormCheckLabel>月次仕訳</BFormCheckLabel>
-                        </BFormCheck>
-                        <BFormCheck>
-                            <BFormCheckInput
-                            type="radio"
-                            name="flexRadioDefault"
-                            />
-                            <BFormCheckLabel>再振替・決算仕訳</BFormCheckLabel>
-                        </BFormCheck>
+                    </BFormCheck>
+                    <BFormCheck>
+                        <BFormCheckInput
+                        type="radio"
+                        name="flexRadioDefault"
+                        checked
+                        />
+                        <BFormCheckLabel>月次仕訳</BFormCheckLabel>
+                    </BFormCheck>
+                    <BFormCheck>
+                        <BFormCheckInput
+                        type="radio"
+                        name="flexRadioDefault"
+                        />
+                        <BFormCheckLabel>再振替・決算仕訳</BFormCheckLabel>
+                    </BFormCheck>
                 </ListGroupItem>
             <CardHeader class="text-center">消費税</CardHeader>
                     <ListGroupItem>
                         <BFormCheck>
                             <BFormCheckInput
                             type="radio"
-                            name="flexRadioDefault"
+                            name="flexRadioDefault1"
                             checked
                             />
                             <BFormCheckLabel>税抜集計</BFormCheckLabel>
@@ -104,7 +104,7 @@
                         <BFormCheck>
                             <BFormCheckInput
                             type="radio"
-                            name="flexRadioDefault"
+                            name="flexRadioDefault1"
                             />
                             <BFormCheckLabel>税込集計</BFormCheckLabel>
                         </BFormCheck>
@@ -122,5 +122,16 @@
                     </ListGroupItem>
                 </ListGroup>
             </Card>
+            <div class="text-center p-4">
+            <b-button
+            button="outline-dark"
+            size="lg"
+            type="button"
+            relative-width="25"
+            class="p-3"
+            >
+            表示
+            </b-button>
+            </div>
     </div>
     </template>
