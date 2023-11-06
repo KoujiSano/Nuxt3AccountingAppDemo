@@ -29,11 +29,11 @@
         <b-div>
             <b-table bordered>
                 <b-thead>
-                    <b-tr theme="primary">
+                    <b-tr theme="primary" text-alignment="center">
                         <b-th scope="col" col="xs-2 sm-1" text-alignment="center">
 
                         </b-th>
-                        <b-th scope="col" col="xs-2 sm-1" text-alignment="center">
+                        <b-th scope="col" col="xs-2 sm-1">
                         コード
                         </b-th>
                         <b-th scope="col" col="xs-6 sm-3" text-alignment="center">
