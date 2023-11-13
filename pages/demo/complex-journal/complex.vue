@@ -29,7 +29,7 @@
 </template>
 
 <script setup>
-import DropdownMenu from '~/components/DropdownMenu.vue';
+import DropdownMenu from '~/components/DropdownMenu-kubo.vue';
 
 const menu1Options = [
   { label: '2023', value: 'optionA' },
