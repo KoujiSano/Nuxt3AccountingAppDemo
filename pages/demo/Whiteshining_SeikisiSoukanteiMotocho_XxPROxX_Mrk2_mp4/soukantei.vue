@@ -31,17 +31,19 @@
         </DropdownMenu>
         </Dropdown>
       </Col>
+    </Row>
+    <Row>
       <Col>
         勘定項目
       </Col>
       <Col>
         <Dropdown>
           <DropdownToggle button="secondary">
-            指定なし
+            100現金
           </DropdownToggle>
           <DropdownMenu>
           <DropdownItem>
-            指定なし
+            100現金
           </DropdownItem>
         </DropdownMenu>
         </Dropdown>
@@ -54,13 +56,31 @@
       <Col>
         <Dropdown>
           <DropdownToggle button="secondary">
-            指定なし
+            100現金
           </DropdownToggle>
           <DropdownMenu>
           <DropdownItem>
-            指定なし
+            100現金
           </DropdownItem>
         </DropdownMenu>
+        </Dropdown>
+      </Col>
+    </Row>
+    <Row justify-content="start">
+      <Col col="4">
+        年度
+      </Col>
+      <Col col="6">
+        <Dropdown  display="grid" gap="2">
+          <DropdownToggle button="secondary">
+          2023
+          </DropdownToggle>
+          <DropdownMenu>
+          <DropdownItem>
+            2023
+          </DropdownItem>
+
+          </DropdownMenu>
         </Dropdown>
       </Col>
     </Row>
