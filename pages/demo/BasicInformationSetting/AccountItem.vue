@@ -1,4 +1,5 @@
 <template>
+    <div>
     <Container>
         <b-div flex padding="t-3" justify-content="center">
             <b-button button="outline-dark" margin="e-2" col="sm-3 xs-4 md-2">
@@ -14,8 +15,8 @@
                 新規補助科目追加
             </b-button>
             <b-button button="outline-dark" margin="e-2" col="sm-2 xs-2 md-2">
-                <b-img src="" />
-                pdf出力
+                <b-img src="https://api.iconify.design/uiw/file-pdf.svg" width="20px" height="20px" />
+                PDF出力
             </b-button>
         </b-div>
         <b-div padding="t-3">
@@ -29,9 +30,9 @@
         <b-div>
             <b-table bordered>
                 <b-thead>
-                    <b-tr theme="primary" text-alignment="center">
+                    <b-tr theme="primary" text-alignment="center" text-wrap="nowrap">
                         <b-th scope="col" col="xs-2 sm-1">
-
+  
                         </b-th>
                         <b-th scope="col" col="xs-2 sm-1">
                         コード
@@ -57,64 +58,23 @@
                     </b-tr>
                 </b-thead>
                 <b-tbody>
-                    <b-tr text-alignment="center">
-                        <b-td scope="row">
+                    <b-tr>
+                        <b-td scope="row" text-alignment="center">
                             <b-a href="#">
                                 変更
                             </b-a>
                         </b-td>
-                        <b-td>Cell</b-td>
-                        <b-td>Cell</b-td>
-                        <b-td>Cell</b-td>
-                        <b-td>Cell</b-td>
-                        <b-td>Cell</b-td>
-                        <b-td>Cell</b-td>
-                        <b-td>Cell</b-td>
-                    </b-tr>
-                    <b-tr text-alignment="center">
-                        <b-td scope="row">
-                            <b-a href="#">
-                                変更
-                            </b-a>
-                        </b-td>
-                        <b-td>Cell</b-td>
-                        <b-td>Cell</b-td>
-                        <b-td>Cell</b-td>
-                        <b-td>Cell</b-td>
-                        <b-td>Cell</b-td>
-                        <b-td>Cell</b-td>
-                        <b-td>Cell</b-td>
-                    </b-tr>
-                    <b-tr text-alignment="center">
-                        <b-td scope="row">
-                            <b-a href="#">
-                                変更
-                            </b-a>
-                        </b-td>
-                        <b-td>Cell</b-td>
-                        <b-td>Cell</b-td>
-                        <b-td>Cell</b-td>
-                        <b-td>Cell</b-td>
-                        <b-td>Cell</b-td>
-                        <b-td>Cell</b-td>
-                        <b-td>Cell</b-td>
-                    </b-tr>
-                    <b-tr text-alignment="center">
-                        <b-td scope="row">
-                            <b-a href="#">
-                                変更
-                            </b-a>
-                        </b-td>
-                        <b-td>Cell</b-td>
-                        <b-td>Cell</b-td>
-                        <b-td>Cell</b-td>
-                        <b-td>Cell</b-td>
-                        <b-td>Cell</b-td>
-                        <b-td>Cell</b-td>
-                        <b-td>Cell</b-td>
+                        <b-td text-alignment="left">Cell</b-td>
+                        <b-td text-alignment="left">Cell</b-td>
+                        <b-td text-alignment="left">Cell</b-td>
+                        <b-td text-alignment="left">Cell</b-td>
+                        <b-td text-alignment="center">Cell</b-td>
+                        <b-td text-alignment="center">Cell</b-td>
+                        <b-td text-alignment="center">Cell</b-td>
                     </b-tr>
                 </b-tbody>
             </b-table>
         </b-div>
     </Container>
-</template>
+  </div>
+  </template>

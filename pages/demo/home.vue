@@ -39,7 +39,7 @@
               <NuxtLink to="/accountinginfoconfig" class="card-link">会社基本設定</NuxtLink>
             </li>
             <li class="list-group-item">
-              <NuxtLink to="/accountconfig" class="card-link">勘定科目</NuxtLink>
+              <NuxtLink to="/demo/BasicInformationSetting/AccountItem" class="card-link">勘定科目</NuxtLink>
             </li>
           </ul>
         </div>
