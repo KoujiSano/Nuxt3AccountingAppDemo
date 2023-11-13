@@ -1,0 +1,1 @@
+import{_ as c,c as o,o as e,a as s}from"./entry.340f050d.js";const t={},a={class:"container"},n=s("div",{class:"row"},[s("div",{class:"col"}," Column "),s("div",{class:"col"}," Column "),s("div",{class:"col"}," Column ")],-1),l=[n];function r(_,d){return e(),o("div",a,l)}const m=c(t,[["render",r]]);export{m as default};

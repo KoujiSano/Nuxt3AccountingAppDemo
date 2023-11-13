@@ -4,17 +4,17 @@
            <thead>
                <tr>
                    <th scope="col">#</th>
-                   <th scope="col">First</th>
-                   <th scope="col">Last</th>
-                   <th scope="col">Handle</th>
+                   <th scope="col">お名前</th>
+                   <th scope="col">所属部門</th>
+                   <th scope="col">権限</th>
                </tr>
            </thead>
            <tbody>
                <tr>
-                         <th scope="row">1</th>
-                         <td>Mark</td>
-                         <td>Otto</td>
-                         <td>@mdo</td>
+                         <th scope="row">変更</th>
+                         <td>前田</td>
+                         <td>大然</td>
+                         <td>admin</td>
                        </tr>
                    <tr>
                          <th scope="row">2</th>
@@ -23,9 +23,9 @@
                          <td>@fat</td>
                        </tr>
                    <tr>
-                         <th scope="row">3</th>
-                         <td colspan="2">Larry the Bird</td>
-                         <td>@twitter</td>
+                         <th scope="row"></th>
+                         <td colspan="2"></td>
+                         <td></td>
                        </tr>
             
            </tbody>
