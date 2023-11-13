@@ -260,7 +260,8 @@
       </tbody>
     </table>
     <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-      <button class="btn btn-primary me-md-2" type="button">Button</button>
+      <a href="/demo/bookKeepingJournal/search" class="btn btn-primary" tabindex="-1" role="button" aria-disabled="true">表示</a>
+      <!-- <button class="btn btn-primary me-md-2" type="button">表示</button> -->
     </div>
   </div>
 </template>
