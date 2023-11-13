@@ -65,6 +65,54 @@
                             <DropdownItem href="#">2023</DropdownItem>
                         </DropdownMenu>
                     </Dropdown>
+                    <BFormCheck inline>
+                        <BFormCheckInput value="option4" />
+                        <BFormCheckLabel>4月</BFormCheckLabel>
+                    </BFormCheck>
+                    <BFormCheck inline>
+                        <BFormCheckInput value="option5" />
+                        <BFormCheckLabel>5月</BFormCheckLabel>
+                    </BFormCheck>
+                    <BFormCheck inline>
+                        <BFormCheckInput value="optio6" />
+                        <BFormCheckLabel>6月</BFormCheckLabel>
+                    </BFormCheck>
+                    <BFormCheck inline>
+                        <BFormCheckInput value="option7" />
+                        <BFormCheckLabel>7月</BFormCheckLabel>
+                    </BFormCheck>
+                    <BFormCheck inline>
+                        <BFormCheckInput value="option8" />
+                        <BFormCheckLabel>8月</BFormCheckLabel>
+                    </BFormCheck>
+                    <BFormCheck inline>
+                        <BFormCheckInput value="option9" />
+                        <BFormCheckLabel>9月</BFormCheckLabel>
+                    </BFormCheck>
+                    <BFormCheck inline>
+                        <BFormCheckInput value="option10" />
+                        <BFormCheckLabel>10月</BFormCheckLabel>
+                    </BFormCheck>
+                    <BFormCheck inline>
+                        <BFormCheckInput value="option11" />
+                        <BFormCheckLabel>11月</BFormCheckLabel>
+                    </BFormCheck>
+                    <BFormCheck inline>
+                        <BFormCheckInput value="option12" />
+                        <BFormCheckLabel>12月</BFormCheckLabel>
+                    </BFormCheck>
+                    <BFormCheck inline>
+                        <BFormCheckInput value="option1" />
+                        <BFormCheckLabel>1月</BFormCheckLabel>
+                    </BFormCheck>
+                    <BFormCheck inline>
+                        <BFormCheckInput value="option2" />
+                        <BFormCheckLabel>2月</BFormCheckLabel>
+                    </BFormCheck>
+                    <BFormCheck inline>
+                        <BFormCheckInput value="option3" />
+                        <BFormCheckLabel>3月</BFormCheckLabel>
+                    </BFormCheck>
                 </ListGroupItem>
             <CardHeader class="text-center">計上書類</CardHeader>
                 <ListGroupItem>
@@ -122,7 +170,7 @@
                     </ListGroupItem>
                 </ListGroup>
             </Card>
-            <div class="text-center p-4">
+            <div class="text-center pt-4">
             <b-button
             button="outline-dark"
             size="lg"
@@ -134,6 +182,14 @@
             class="p-3"
             >
             表示
+            </b-button>
+            </div>
+            <div class="text-center">
+            <b-button button="outline-secondary">
+            PDF出力
+            </b-button>
+            <b-button button="outline-secondary">
+            CSV出力
             </b-button>
             </div>
     </div>
