@@ -13,21 +13,15 @@
         <CardHeader class="text-center">決算区分</CardHeader>
         <ListGroupItem class="m-3">
           <ButtonGroup aria-label="Basic checkbox toggle button group">
-            <RadioToggleButton
-              name="btnradio-kbn"
-              button="outline-success"
-            >
+            <RadioToggleButton name="btnradio-kbn" button="outline-success" @click="dataset('期末決算')">
               期末決算
             </RadioToggleButton>
-            <RadioToggleButton
-              name="btnradio-kbn"
-              button="outline-danger"
-            >
+            <RadioToggleButton name="btnradio-kbn" button="outline-danger" @click="dataset('中間決算')">
               中間決算
             </RadioToggleButton>
           </ButtonGroup>
         </ListGroupItem>
-        <CardHeader class="text-center">決算区分</CardHeader>
+        <CardHeader class="text-center">消費税</CardHeader>
         <ListGroupItem class="m-3">
           <ButtonGroup aria-label="Basic checkbox toggle button group">
             <RadioToggleButton name="btnradio-zei" button="outline-success">
@@ -38,7 +32,7 @@
             </RadioToggleButton>
           </ButtonGroup>
         </ListGroupItem>
-        <CardHeader class="text-center">決算区分</CardHeader>
+        <CardHeader class="text-center">出力様式</CardHeader>
         <ListGroupItem class="m-3">
           <ButtonGroup aria-label="Basic checkbox toggle button group">
             <RadioToggleButton name="btnradio-syk" button="outline-success">
@@ -81,16 +75,17 @@
           </ButtonGroup>
         </ListGroupItem>
       </Card>
-      <b-a button="primary" href="/demo/Darkness_KessanHoukoku_MARK_V1_mp5/SenkaGekkou_info" class="m-2">
+      <b-a button="primary" href="/demo/Darkness_KessanHoukoku_MARK_V1_mp5/KessanHoukoku_info" class="m-2">
         報告書情報設定
-        </b-a>
-        <b-a button="primary" href="/demo/Darkness_KessanHoukoku_MARK_V1_mp5/SenkaGekkou_info" class="m-2">
+      </b-a>
+      <b-a button="primary" href="/demo/Darkness_KessanHoukoku_MARK_V1_mp5/KessanHoukoku_info" class="m-2">
         報告書情報設定
-        </b-a>
+      </b-a>
     </div>
   </container>
 </template>
 
 <style></style>
 
-<script></script>
+<script lang="ts" setup>
+</script>
