@@ -13,8 +13,9 @@ footer {
 }
 
 .rainbow-text {
-    background: linear-gradient(to left, orange, yellow, violet);
-    -webkit-background-clip: text;
-    color: transparent;
+	background: linear-gradient(180deg, red, orange, yellow, violet);
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
 }
 </style>

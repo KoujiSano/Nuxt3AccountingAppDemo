@@ -9,5 +9,12 @@ export default defineNuxtConfig({
     ],
     css: [
         "bootstrap/scss/bootstrap.scss"
-    ]
+    ],
+    vite: {
+        server: {
+            watch: {
+                usePolling: true
+            }
+        },
+    }
 })

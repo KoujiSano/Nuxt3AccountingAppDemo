@@ -1,26 +1,26 @@
 <template>
     <container class="container">
         <div>
-            <h1>レインボー決算報告書</h1>
+            <h1 class="good-rainbow-text">Xx刹那漆黒xX決算報告書</h1>
             <Card class="text-center m-4">
                 <CardHeader class="text-center">年度</CardHeader>
                 <ListGroupItem class="m-3">
-                    <select aria-label="Default select example">
+                    <BFormSelect aria-label="Default select example">
                         <b-option value="1">
                             2023
                         </b-option>
                         <b-option value="2">
                             19XX
                         </b-option>
-                    </select>
+                    </BFormSelect>
                 </ListGroupItem>
                 <CardHeader class="text-center">決算区分</CardHeader>
                 <ListGroupItem class="m-3">
                     <ButtonGroup aria-label="Basic checkbox toggle button group">
-                        <RadioToggleButton name="btnradio-kbn" button="outline-success">
+                        <RadioToggleButton @click="setData('期末決算')" name="btnradio-kbn" button="outline-success">
                             期末決算
                         </RadioToggleButton>
-                        <RadioToggleButton name="btnradio-kbn" button="outline-danger">
+                        <RadioToggleButton @click="setData('中間決算')" name="btnradio-kbn" button="outline-danger">
                             中間決算
                         </RadioToggleButton>
                     </ButtonGroup>
@@ -29,7 +29,7 @@
                 <ListGroupItem class="m-3">
                     <ButtonGroup aria-label="Basic checkbox toggle button group">
                         <RadioToggleButton name="btnradio-zei" button="outline-success">
-                            脱税集計
+                            税抜集計
                         </RadioToggleButton>
                         <RadioToggleButton name="btnradio-zei" button="outline-danger">
                             税込集計
@@ -43,14 +43,14 @@
                             報告式
                         </RadioToggleButton>
                         <RadioToggleButton name="btnradio-syk" button="outline-danger">
-                            感情式
+                            勘定式
                         </RadioToggleButton>
                     </ButtonGroup>
                 </ListGroupItem>
                 <CardHeader class="text-center">A4縦様式</CardHeader>
                 <ListGroupItem class="m-3">
                     <ButtonGroup aria-label="Basic checkbox toggle button group">
-                        <CheckboxToggleButton button="outline-primary" id="A4" v-model="A4">
+                        <CheckboxToggleButton button="outline-primary">
                             貸借対照表
                         </CheckboxToggleButton>
                         <CheckboxToggleButton button="outline-primary">
@@ -73,7 +73,7 @@
                 <CardHeader class="text-center">A3横様式</CardHeader>
                 <ListGroupItem class="m-3">
                     <ButtonGroup aria-label="Basic checkbox toggle button group">
-                        <CheckboxToggleButton button="outline-primary" id="A3" v-model="A3">
+                        <CheckboxToggleButton button="outline-primary">
                             株主資本等変動計算書
                         </CheckboxToggleButton>
                     </ButtonGroup>
@@ -83,7 +83,8 @@
     </container>
 </template>
 
-<style scoped></style>
+<style>
+</style>
 
 <script>
 </script>
