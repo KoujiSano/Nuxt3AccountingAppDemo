@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <Container>
     <div class="row">
       <div class="col">
         <div class="card">
@@ -19,7 +19,7 @@
             <li class="list-group-item">
               <NuxtLink to="/accountledger" class="card-link">総勘定元帳</NuxtLink>
             </li>
-            <li class="list-group-item"><a href="#" class="card-link">補助元帳</a></li>
+            <li class="list-group-item"><NuxtLink to="/demo/hojomototyou/subledger" class="card-link">補助元帳</NuxtLink></li>
           </ul>
         </div>
       </div>
@@ -39,11 +39,11 @@
               <NuxtLink to="/accountinginfoconfig" class="card-link">会社基本設定</NuxtLink>
             </li>
             <li class="list-group-item">
-              <NuxtLink to="/accountconfig" class="card-link">勘定科目</NuxtLink>
+              <NuxtLink to="/demo/BasicInformationSetting/AccountItem" class="card-link">勘定科目</NuxtLink>
             </li>
           </ul>
         </div>
       </div>
-  </div>
-
-</div></template>
+    </div>
+  </Container>
+</template>

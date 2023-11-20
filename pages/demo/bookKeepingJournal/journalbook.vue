@@ -50,11 +50,11 @@
               <input
                 class="form-check-input"
                 type="radio"
-                name="flexRadioDefault"
-                id="flexRadioDefault1"
+                name="targetDateRange"
+                id="targetDateRange1"
                 checked
               />
-              <label class="form-check-label" for="flexRadioDefault1">
+              <label class="form-check-label" for="targetDateRange1">
                 仕訳日付
               </label>
             </div>
@@ -62,10 +62,10 @@
               <input
                 class="form-check-input"
                 type="radio"
-                name="flexRadioDefault"
-                id="flexRadioDefault2"
+                name="targetDateRange"
+                id="targetDateRange2"
               />
-              <label class="form-check-label" for="flexRadioDefault2">
+              <label class="form-check-label" for="targetDateRange2">
                 入力日付
               </label>
             </div>
@@ -108,11 +108,11 @@
               <input
                 class="form-check-input"
                 type="radio"
-                name="flexRadioDefault"
-                id="flexRadioDefault1"
+                name="reportingType"
+                id="reportingType1"
                 checked
               />
-              <label class="form-check-label" for="flexRadioDefault1">
+              <label class="form-check-label" for="reportingType1">
                 全件
               </label>
             </div>
@@ -120,10 +120,10 @@
               <input
                 class="form-check-input"
                 type="radio"
-                name="flexRadioDefault"
-                id="flexRadioDefault2"
+                name="reportingType"
+                id="reportingType2"
               />
-              <label class="form-check-label" for="flexRadioDefault2">
+              <label class="form-check-label" for="reportingType2">
                 月次仕訳
               </label>
             </div>
@@ -131,10 +131,10 @@
               <input
                 class="form-check-input"
                 type="radio"
-                name="flexRadioDefault"
-                id="flexRadioDefault2"
+                name="reportingType"
+                id="reportingType3"
               />
-              <label class="form-check-label" for="flexRadioDefault2">
+              <label class="form-check-label" for="reportingType3">
                 再振替・決算仕訳
               </label>
             </div>
@@ -147,11 +147,11 @@
               <input
                 class="form-check-input"
                 type="radio"
-                name="flexRadioDefault"
-                id="flexRadioDefault1"
+                name="tag"
+                id="tag1"
                 checked
               />
-              <label class="form-check-label" for="flexRadioDefault1">
+              <label class="form-check-label" for="tag1">
                 全件
               </label>
             </div>
@@ -159,10 +159,10 @@
               <input
                 class="form-check-input"
                 type="radio"
-                name="flexRadioDefault"
-                id="flexRadioDefault2"
+                name="tag"
+                id="tag2"
               />
-              <label class="form-check-label" for="flexRadioDefault2">
+              <label class="form-check-label" for="tag2">
                 付箋あり
               </label>
             </div>
@@ -170,10 +170,10 @@
               <input
                 class="form-check-input"
                 type="radio"
-                name="flexRadioDefault"
-                id="flexRadioDefault2"
+                name="tag"
+                id="tag3"
               />
-              <label class="form-check-label" for="flexRadioDefault2">
+              <label class="form-check-label" for="tag3">
                 ファイル添付あり
               </label>
             </div>
@@ -186,11 +186,11 @@
               <input
                 class="form-check-input"
                 type="radio"
-                name="flexRadioDefault"
-                id="flexRadioDefault1"
+                name="inputTypeClassification"
+                id="inputTypeClassification1"
                 checked
               />
-              <label class="form-check-label" for="flexRadioDefault1">
+              <label class="form-check-label" for="inputTypeClassification1">
                 全件
               </label>
             </div>
@@ -198,10 +198,10 @@
               <input
                 class="form-check-input"
                 type="radio"
-                name="flexRadioDefault"
-                id="flexRadioDefault2"
+                name="inputTypeClassification"
+                id="inputTypeClassification2"
               />
-              <label class="form-check-label" for="flexRadioDefault2">
+              <label class="form-check-label" for="inputTypeClassification2">
                 通常入力
               </label>
             </div>
@@ -209,10 +209,10 @@
               <input
                 class="form-check-input"
                 type="radio"
-                name="flexRadioDefault"
-                id="flexRadioDefault2"
+                name="inputTypeClassification"
+                id="inputTypeClassification3"
               />
-              <label class="form-check-label" for="flexRadioDefault2">
+              <label class="form-check-label" for="inputTypeClassification3">
                 データ読み込み
               </label>
             </div>
@@ -225,11 +225,11 @@
               <input
                 class="form-check-input"
                 type="radio"
-                name="flexRadioDefault"
-                id="flexRadioDefault1"
+                name="outputOrder"
+                id="outputOrder1"
                 checked
               />
-              <label class="form-check-label" for="flexRadioDefault1">
+              <label class="form-check-label" for="outputOrder1">
                 仕訳日付
               </label>
             </div>
@@ -237,10 +237,10 @@
               <input
                 class="form-check-input"
                 type="radio"
-                name="flexRadioDefault"
-                id="flexRadioDefault2"
+                name="outputOrder"
+                id="outputOrder2"
               />
-              <label class="form-check-label" for="flexRadioDefault2">
+              <label class="form-check-label" for="outputOrder2">
                 入力日付
               </label>
             </div>
@@ -248,10 +248,10 @@
               <input
                 class="form-check-input"
                 type="radio"
-                name="flexRadioDefault"
-                id="flexRadioDefault2"
+                name="outputOrder"
+                id="outputOrder3"
               />
-              <label class="form-check-label" for="flexRadioDefault2">
+              <label class="form-check-label" for="outputOrder3">
                 仕訳番号
               </label>
             </div>
