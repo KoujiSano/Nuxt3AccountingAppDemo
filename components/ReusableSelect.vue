@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="reusable-select" :style="{ width: size }">
     <select v-model="selectedOption" @change="handleChange">
       <option v-for="option in options" :key="option.value" :value="option.value">
         {{ option.label }}
@@ -11,12 +11,24 @@
 <script setup>
 import { ref, defineProps } from 'vue';
 
-const props = defineProps(['options']); // 親コンポーネントからオプションを受け取る
+const props = defineProps(['options', 'size']);
 
 const selectedOption = ref(null);
 
 const handleChange = () => {
-  // プルダウンメニューの選択が変更されたときの処理をここに追加
+  // 選択が変更されたときの処理をここに追加
   console.log('Selected option:', selectedOption.value);
 };
 </script>
+
+<style scoped>
+.reusable-select {
+  position: relative;
+}
+
+select {
+  width: 100%;
+  padding: 0px;
+  font-size: 16px;
+}
+</style>

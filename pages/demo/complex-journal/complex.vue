@@ -5,11 +5,11 @@
   <table class="table">
     <thead>
       <tr>
-        <th>年度<DropdownMenu :options="menu1Options" /></th>
-        <th>区分<DropdownMenu :options="menu2Options" /></th>
-        <th>会計単位<DropdownMenu :options="menu3Options" /></th>
-        <th>消費税<DropdownMenu :options="menu4Options" /></th>
-        <th>対象期間<DropdownMenu :options="menu5Options" /></th>
+        <th>年度<ReusableSelect :options="select1Options" :size="select1Size" /></th>
+        <th>区分<ReusableSelect :options="select2Options" :size="select2Size" /></th>
+        <th>会計単位<ReusableSelect :options="select3Options" :size="select3Size" /></th>
+        <th>消費税<ReusableSelect :options="select4Options" :size="select4Size" /></th>
+        <th>対象期間<ReusableSelect :options="select5Options" :size="select5Size" /></th>
       </tr>
     </thead>
     <tbody>
@@ -29,29 +29,34 @@
 </template>
 
 <script setup>
-import DropdownMenu from '~/components/DropdownMenu-kubo.vue';
+import ReusableSelect from '~/components/ReusableSelect.vue';
 
-const menu1Options = [
+const select1Options = [
   { label: '2023', value: 'optionA' },
+  { label: '2024', value: 'optionB' },
 ];
+const select1Size = '70px';
 
-const menu2Options = [
-  { label: '月次', value: 'optionX' },
-  { label: '決算（中間）', value: 'optionY' },
-  { label: '決算（期末）', value: 'optionZ' },
-  { label: '決算再振替', value: 'optionα' },
-  { label: '期中', value: 'optionω' },
+const select2Options = [
+  { label: '月次', value: 'optionA' },
+  { label: '決算（中間）', value: 'optionB' },
+  { label: '決算（期末）', value: 'optionC' },
+  { label: '決算再振替', value: 'optionD' },
+  { label: '期中', value: 'optionE' },
 ];
+const select2Size = '115px';
 
-const menu3Options = [
-  { label: '本社', value: 'optionX' },
+const select3Options = [
+  { label: '本社', value: 'optionA' },
 ];
+const select3Size = '60px';
 
-const menu4Options = [
+const select4Options = [
   { label: '原則課税/税抜処理', value: 'optionA' },
 ];
+const select4Size = '170px';
 
-const menu5Options = [
+const select5Options = [
   { label: '2023/1/1 ~ 2023/1/30', value: 'optionA' },
   { label: '2023/2/1 ~ 2023/2/28', value: 'optionB' },
   { label: '2023/3/1 ~ 2023/3/31', value: 'optionC' },
@@ -64,6 +69,7 @@ const menu5Options = [
   { label: '2023/10/1 ~ 2023/10/31', value: 'optionJ' },
   { label: '2023/11/1 ~ 2023/11/30', value: 'optionK' },
   { label: '2023/12/1 ~ 2023/12/31', value: 'optionL' },
-
 ];
+const select5Size = '200px';
+
 </script>
