@@ -4,67 +4,76 @@
             <CardHeader class="text-center">会計単位</CardHeader>
                 <ListGroup flush class="text-center">
                     <ListGroupItem>
-                        <Dropdown>
-                            <DropdownToggle button="light">
+                        <BFormSelect
+                        margin="x-auto"
+                        relative-width="25"
+                        class="text-center">
+                            <b-option selected>
                             本社
-                            </DropdownToggle>
-                        <DropdownMenu>
-                            <DropdownItem href="#">本社</DropdownItem>
-                        </DropdownMenu>
-                        </Dropdown>
+                            </b-option>
+                        </BFormSelect>
                     </ListGroupItem>
             <CardHeader class="text-center">部門</CardHeader>
                 <ListGroupItem>
-                        <Dropdown>
-                            <DropdownToggle button="light">
+                        <BFormSelect
+                        margin="x-auto"
+                        relative-width="25"
+                        class="text-center">
+                            <b-option selected>
                             指定なし
-                            </DropdownToggle>
-                        <DropdownMenu>
-                            <DropdownItem href="#">指定なし</DropdownItem>
-                        </DropdownMenu>
-                        </Dropdown>
+                            </b-option>
+                        </BFormSelect>
                 </ListGroupItem>
             <CardHeader class="text-center">鑑定科目</CardHeader>
                 <ListGroupItem>
-                        <Dropdown>
-                            <DropdownToggle button="light">
+                        <BFormSelect
+                        margin="x-auto"
+                        relative-width="25"
+                        class="text-center">
+                            <b-option selected>
                             鑑定科目
-                            </DropdownToggle>
-                        <DropdownMenu>
-                            <DropdownItem href="#"></DropdownItem>
-                        </DropdownMenu>
-                        </Dropdown>
+                            </b-option>
+                        </BFormSelect>
                 </ListGroupItem>
             <CardHeader class="text-center">補助科目</CardHeader>
                 <ListGroupItem>
-                        <Dropdown>
-                            <DropdownToggle button="light">
+                        <BFormSelect
+                        margin="x-auto"
+                        relative-width="25"
+                        class="text-center">
+                            <b-option selected>
                             補助科目
-                            </DropdownToggle>
-                        <DropdownMenu>
-                            <DropdownItem href="#"></DropdownItem>
-                        </DropdownMenu>
-                        </Dropdown>
+                            </b-option>
+                        </BFormSelect>
                         <div>から</div>
-                        <Dropdown>
-                            <DropdownToggle button="light">
+                        <BFormSelect
+                        margin="x-auto"
+                        relative-width="25"
+                        class="text-center">
+                            <b-option selected>
                             補助科目
-                            </DropdownToggle>
-                        <DropdownMenu>
-                            <DropdownItem href="#"></DropdownItem>
-                        </DropdownMenu>
-                        </Dropdown>
+                            </b-option>
+                        </BFormSelect>
                 </ListGroupItem>
             <CardHeader class="text-center">年度</CardHeader>
                 <ListGroupItem>
-                    <Dropdown>
-                        <DropdownToggle button="light">
+                    <BFormSelect
+                    margin="x-auto"
+                    relative-width="25"
+                    class="text-center">
+                        <b-option selected>
                         2023
-                        </DropdownToggle>
-                        <DropdownMenu>
-                            <DropdownItem href="#">2023</DropdownItem>
-                        </DropdownMenu>
-                    </Dropdown>
+                        </b-option>
+                        <b-option value="1">
+                        2022
+                        </b-option>
+                        <b-option value="2">
+                        2021
+                        </b-option>
+                        <b-option value="3">
+                        2020
+                        </b-option>
+                    </BFormSelect>
                     <BFormCheck inline>
                         <BFormCheckInput value="option4" />
                         <BFormCheckLabel>4月</BFormCheckLabel>
@@ -161,8 +170,25 @@
                     <ListGroupItem>
                         <BFormCheck>
                             <BFormCheckInput />
-                                <BFormCheckLabel>月毎改ページ</BFormCheckLabel>
+                                <BFormCheckLabel>月毎改ページ
+                                <b-button
+                                button="secondary"
+                                toggle="collapse"
+                                target="#collapseExample"
+                                >
+                                ?
+                                </b-button>
+                            </BFormCheckLabel>
                             </BFormCheck>
+                            <Collapse id="collapseExample">
+                                <Card>
+                                <CardBody
+                                text-background="secondary-subtle"
+                                >
+                                PDF出力時のみ有効です
+                                </CardBody>
+                                </Card>
+                            </Collapse>
                         <BFormCheck>
                             <BFormCheckInput checked />
                                 <BFormCheckLabel>仕訳がある科目のみ出力</BFormCheckLabel>

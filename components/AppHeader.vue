@@ -1,7 +1,7 @@
 <template>
 	<div class="container pb-4">
 		<header>
-			<h1>会計</h1>
+			<h1><NuxtLink to="/demo/home">会計</NuxtLink></h1>
 		</header>
 	</div>
 </template>
@@ -11,5 +11,15 @@ header {
 	color: #fff;
 	padding: 20px;
 	background-color: #BBBBBB;
+}
+header a {
+    color: #fff;
+	text-decoration: none;
+}
+header a:visited {
+    color: #fff;
+}
+header a:hover {
+    color: #fff;
 }
 </style>
