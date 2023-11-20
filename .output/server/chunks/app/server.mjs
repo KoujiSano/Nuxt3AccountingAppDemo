@@ -632,7 +632,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/AccountItem-a0ea9826.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/AccountItem-276f7194.mjs').then((m) => m.default || m)
   },
   {
     name: "demo-bookKeepingJournal-journalbook",
@@ -640,7 +640,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/journalbook-69920efc.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/journalbook-7c35e24a.mjs').then((m) => m.default || m)
   },
   {
     name: "demo-bookKeepingJournal-search",
@@ -648,7 +648,15 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/search-3e5268a7.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/search-5922f4ca.mjs').then((m) => m.default || m)
+  },
+  {
+    name: "demo-CompaneySetting-setting",
+    path: "/demo/CompaneySetting/setting",
+    meta: {},
+    alias: [],
+    redirect: void 0,
+    component: () => import('./_nuxt/setting-870ae23f.mjs').then((m) => m.default || m)
   },
   {
     name: "demo-complex-journal-complex",
@@ -659,20 +667,20 @@ const _routes = [
     component: () => import('./_nuxt/complex-5514092a.mjs').then((m) => m.default || m)
   },
   {
+    name: "demo-Darkness_KessanHoukoku_MARK_V1_mp5-KessanHoukoku_info",
+    path: "/demo/Darkness_KessanHoukoku_MARK_V1_mp5/KessanHoukoku_info",
+    meta: {},
+    alias: [],
+    redirect: void 0,
+    component: () => import('./_nuxt/KessanHoukoku_info-7c663058.mjs').then((m) => m.default || m)
+  },
+  {
     name: "demo-Darkness_KessanHoukoku_MARK_V1_mp5-KessanHoukoku",
     path: "/demo/Darkness_KessanHoukoku_MARK_V1_mp5/KessanHoukoku",
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/KessanHoukoku-2839ff14.mjs').then((m) => m.default || m)
-  },
-  {
-    name: "demo-Darkness_KessanHoukoku_MARK_V1_mp5-SenkaGekkou_info",
-    path: "/demo/Darkness_KessanHoukoku_MARK_V1_mp5/SenkaGekkou_info",
-    meta: {},
-    alias: [],
-    redirect: void 0,
-    component: () => import('./_nuxt/SenkaGekkou_info-7a24126e.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/KessanHoukoku-a39e3cc7.mjs').then((m) => m.default || m)
   },
   {
     name: "demo-game",
@@ -683,20 +691,12 @@ const _routes = [
     component: () => import('./_nuxt/game-70120113.mjs').then((m) => m.default || m)
   },
   {
-    name: "demo-grid",
-    path: "/demo/grid",
-    meta: {},
-    alias: [],
-    redirect: void 0,
-    component: () => import('./_nuxt/grid-751f1e4e.mjs').then((m) => m.default || m)
-  },
-  {
     name: "demo-hojomototyou-subledger",
     path: "/demo/hojomototyou/subledger",
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/subledger-37327ed1.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/subledger-cc405353.mjs').then((m) => m.default || m)
   },
   {
     name: "demo-home",
@@ -704,7 +704,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/home-9a4a67df.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/home-814d957b.mjs').then((m) => m.default || m)
   },
   {
     name: "demo-journaList_Search-search",
@@ -752,7 +752,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/soukantei-b101af20.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/soukantei-6e075c35.mjs').then((m) => m.default || m)
   },
   {
     name: "index",
@@ -1043,8 +1043,8 @@ const LazyProseTh = defineAsyncComponent(() => import('./_nuxt/ProseTh-6bc774c0.
 const LazyProseThead = defineAsyncComponent(() => import('./_nuxt/ProseThead-60b3004c.mjs').then((r) => r.default));
 const LazyProseTr = defineAsyncComponent(() => import('./_nuxt/ProseTr-d81a1e8c.mjs').then((r) => r.default));
 const LazyProseUl = defineAsyncComponent(() => import('./_nuxt/ProseUl-d6f6ad9d.mjs').then((r) => r.default));
-const LazyIcon = defineAsyncComponent(() => import('./_nuxt/Icon-c88ed57a.mjs').then((r) => r.default));
-const LazyIconCSS = defineAsyncComponent(() => import('./_nuxt/IconCSS-990a2606.mjs').then((r) => r.default));
+const LazyIcon = defineAsyncComponent(() => import('./_nuxt/Icon-33d6f438.mjs').then((r) => r.default));
+const LazyIconCSS = defineAsyncComponent(() => import('./_nuxt/IconCSS-9ea92b01.mjs').then((r) => r.default));
 const lazyGlobalComponents = [
   ["ContentDoc", LazyContentDoc],
   ["ContentList", LazyContentList],
@@ -1103,6 +1103,14 @@ const rand = (min, max) => {
 };
 function resolveUnref(r) {
   return typeof r === "function" ? r() : unref(r);
+}
+function promiseTimeout(ms, throwOnTimeout = false, reason = "Timeout") {
+  return new Promise((resolve, reject) => {
+    if (throwOnTimeout)
+      setTimeout(() => reject(reason), ms);
+    else
+      setTimeout(resolve, ms);
+  });
 }
 function identity(arg) {
   return arg;
@@ -1924,5 +1932,5 @@ let entry;
 }
 const entry$1 = (ctx) => entry(ctx);
 
-export { onClickOutside as A, _export_sfc as _, useNuxtApp as a, hasValue as b, createError as c, hSlots as d, entry$1 as default, exposeMethods as e, addProp as f, useEventBus as g, hProps as h, unrefElement as i, isPropDefined as j, useElementHover as k, useRouter as l, navigateTo as m, nuxtLinkDefaults as n, injectHead as o, resolveUnrefHeadInput as p, useRoute as q, rand as r, asyncDataDefaults as s, addClassNames as t, useRuntimeConfig as u, spacing as v, defaultDocument as w, isPropUndefined as x, toArray as y, useIntersectionObserver as z };
+export { toArray as A, useIntersectionObserver as B, onClickOutside as C, _export_sfc as _, useNuxtApp as a, hasValue as b, createError as c, addProp as d, entry$1 as default, exposeMethods as e, hSlots as f, useEventBus as g, hProps as h, unrefElement as i, isPropDefined as j, useElementHover as k, useRouter as l, navigateTo as m, nuxtLinkDefaults as n, injectHead as o, resolveUnrefHeadInput as p, useRoute as q, rand as r, asyncDataDefaults as s, addClassNames as t, useRuntimeConfig as u, spacing as v, promiseTimeout as w, defaultWindow as x, defaultDocument as y, isPropUndefined as z };
 //# sourceMappingURL=server.mjs.map
