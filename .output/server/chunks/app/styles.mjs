@@ -1,6 +1,6 @@
 const interopDefault = r => r.default || r || [];
 const styles = {
-  "node_modules/nuxt/dist/app/entry.js": () => import('./_nuxt/entry-styles.68bec807.mjs').then(interopDefault),
+  "node_modules/nuxt/dist/app/entry.js": () => import('./_nuxt/entry-styles.e2752293.mjs').then(interopDefault),
   "node_modules/@nuxt/content/dist/runtime/components/Prose/ProseCode.vue": () => import('./_nuxt/ProseCode-styles.93005832.mjs').then(interopDefault),
   "node_modules/@nuxt/content/dist/runtime/components/Prose/ProsePre.vue": () => import('./_nuxt/ProsePre-styles.9d8d359a.mjs').then(interopDefault),
   "node_modules/nuxt-icon/dist/runtime/Icon.vue": () => import('./_nuxt/Icon-styles.3c97f940.mjs').then(interopDefault),
