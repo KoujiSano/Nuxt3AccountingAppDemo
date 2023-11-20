@@ -1,7 +1,6 @@
-export const DarknessData = () => useState('darkness', () => {
-    return {
-        kubun: "ダークネス",
-        year: "漆黒の闇",
-        }
-    }
-)
+export const yeardata = () => {
+    return useState<number>('y', () => 1341)
+  }
+export const kubundata = () => {
+    return useState<string>('k', () => "なーん..にゃん")
+  }
