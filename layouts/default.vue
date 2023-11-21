@@ -3,5 +3,6 @@
     <AppHeader />
     <slot />
     <AppAside />
+    <AppFooter />
   </div>
 </template>
