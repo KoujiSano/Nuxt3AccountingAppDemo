@@ -1,3 +1,10 @@
+<script setup lang="ts">
+import { yeardata,kubundata } from '@/composables/DarknessData'
+useHead({ title: '決算報告書' })
+const year = yeardata()
+const kubun = kubundata()
+const setkubun = (kbn:any) => (kubun.value = kbn)
+</script>
 <template>
   <container class="container">
     <div>
@@ -87,10 +94,3 @@
 </template>
 
 <style></style>
-
-<script setup lang="ts">
-import { yeardata,kubundata } from '@/composables/DarknessData'
-const year = yeardata()
-const kubun = kubundata()
-const setkubun = (kbn:any) => (kubun.value = kbn)
-</script>
