@@ -1,9 +1,10 @@
 <script setup lang="ts">
-import { yeardata,kubundata } from '@/composables/DarknessData'
+import { yeardata,kubundata,userdata } from '@/composables/DarknessData'
 useHead({ title: '決算報告書' })
 const year = yeardata()
 const kubun = kubundata()
-const setkubun = (kbn:any) => (kubun.value = kbn)
+const User = userdata()
+const setkubun = (kbn:any) => (User.value.Kubun= kbn)
 </script>
 <template>
   <container class="container">
@@ -12,7 +13,7 @@ const setkubun = (kbn:any) => (kubun.value = kbn)
       <Card class="text-center">
         <CardHeader class="text-center">年度</CardHeader>
         <ListGroupItem class="m-3">
-          <select aria-label="Default select example" v-model="year">
+          <select aria-label="Default select example" v-model="User.Year">
             <option hidden>選択してください</option>
             <option> 2023 </option>
             <option> 19XX </option>
