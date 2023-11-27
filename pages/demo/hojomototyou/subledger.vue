@@ -35,7 +35,24 @@
                             </b-option>
                         </BFormSelect>
                 </ListGroupItem>
-            <CardHeader class="text-center">補助科目</CardHeader>
+            <CardHeader class="text-center">補助科目
+                                <b-button
+                                button="secondary"
+                                toggle="collapse"
+                                target="#collapse1"
+                                >
+                                ?
+                                </b-button>
+                            </CardHeader>
+                            <Collapse id="collapse">
+                                <Card>
+                                <CardBody
+                                text-background="secondary-subtle"
+                                >
+                                範囲指定はPDF・CSV出力時のみ有効です<br>画面表示は下側の科目で検索を行います
+                                </CardBody>
+                                </Card>
+                            </Collapse>
                 <ListGroupItem>
                         <BFormSelect
                         margin="x-auto"
@@ -83,7 +100,7 @@
                         <BFormCheckLabel>5月</BFormCheckLabel>
                     </BFormCheck>
                     <BFormCheck inline>
-                        <BFormCheckInput value="optio6" />
+                        <BFormCheckInput value="option6" />
                         <BFormCheckLabel>6月</BFormCheckLabel>
                     </BFormCheck>
                     <BFormCheck inline>
@@ -122,6 +139,9 @@
                         <BFormCheckInput value="option3" />
                         <BFormCheckLabel>3月</BFormCheckLabel>
                     </BFormCheck>
+                    <div class="text-center">
+                    月の範囲指定する場合は、対象月をクリックして選択してください。
+                    </div>
                 </ListGroupItem>
             <CardHeader class="text-center">計上書類</CardHeader>
                 <ListGroupItem>
