@@ -4,8 +4,18 @@
             <div class="card-header bg-info">
                 会計期間
             </div>
-            <label for="inputPassword5" class="form-label">期首日 ※必須</label>
-            <input type="password" id="inputPassword5" class="form-control" aria-labelledby="passwordHelpBlock">
+            <table class="table table-bordered">
+                <tr>
+          <th>旗首日</th>
+          <td>
+            <select class="form-select" aria-label="選択してください。">
+              <option value="1">本社</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+          </td>
+        </tr>
+            </table>
             <div id="passwordHelpBlock" class="form-text">
                 <h5>* 会計年度 2023年<br>
                     * 会計期間 2023年4月1日 から 2024年3月31日</h5>
