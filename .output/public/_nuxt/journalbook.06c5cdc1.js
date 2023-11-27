@@ -1,1 +1,0 @@
-import{_ as e}from"./JournalBook.a54f752c.js";import{_ as n,c,b as t,o as _}from"./entry.987a87cd.js";const r={},s={class:"container"};function a(i,m){const o=e;return _(),c("div",s,[t(o)])}const l=n(r,[["render",a]]);export{l as default};

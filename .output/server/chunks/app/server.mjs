@@ -640,7 +640,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/journalbook-7c35e24a.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/journalbook-15826b78.mjs').then((m) => m.default || m)
   },
   {
     name: "demo-bookKeepingJournal-search",
@@ -648,7 +648,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/search-a1096957.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/search-0476ef7a.mjs').then((m) => m.default || m)
   },
   {
     name: "demo-CompaneySetting-setting",
@@ -1027,8 +1027,8 @@ const LazyProseTh = defineAsyncComponent(() => import('./_nuxt/ProseTh-6bc774c0.
 const LazyProseThead = defineAsyncComponent(() => import('./_nuxt/ProseThead-60b3004c.mjs').then((r) => r.default));
 const LazyProseTr = defineAsyncComponent(() => import('./_nuxt/ProseTr-d81a1e8c.mjs').then((r) => r.default));
 const LazyProseUl = defineAsyncComponent(() => import('./_nuxt/ProseUl-d6f6ad9d.mjs').then((r) => r.default));
-const LazyIcon = defineAsyncComponent(() => import('./_nuxt/Icon-58f0dfac.mjs').then((r) => r.default));
-const LazyIconCSS = defineAsyncComponent(() => import('./_nuxt/IconCSS-204db49d.mjs').then((r) => r.default));
+const LazyIcon = defineAsyncComponent(() => import('./_nuxt/Icon-16b971e2.mjs').then((r) => r.default));
+const LazyIconCSS = defineAsyncComponent(() => import('./_nuxt/IconCSS-4d341fe2.mjs').then((r) => r.default));
 const lazyGlobalComponents = [
   ["ContentDoc", LazyContentDoc],
   ["ContentList", LazyContentList],

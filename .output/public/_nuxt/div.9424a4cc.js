@@ -1,1 +1,0 @@
-import{r as e,x as n,y as r}from"./entry.987a87cd.js";import{B as a,u as p}from"./useBlock.4b5a21b9.js";const i=e({name:"HtmlDiv",props:{...a,tag:{type:String,default:"div"}},setup(o,t){const s=p(o);return()=>n(o.tag,r(s),t.slots)}});export{i as _};
