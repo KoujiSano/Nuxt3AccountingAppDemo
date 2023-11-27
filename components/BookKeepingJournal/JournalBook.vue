@@ -1,24 +1,22 @@
 <template>
   <div class="container">
-    <h1>仕訳帳</h1>
-    <table class="table">
-      <tbody>
-        <tr>
-          <th>会計単位</th>
-          <td>
+    <b-h level="1">仕訳帳</b-h>
+    <b-table class="table">
+      <b-thead>
+        <b-tr>
+          <b-th>会計単位</b-th>
+          <b-td>
             <select class="form-select" aria-label="選択してください。">
               <option value="1">本社</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
             </select>
-          </td>
-        </tr>
-        <tr>
-          <th>対象仕訳番号</th>
-          <td>
-            <div class="mb-3">
-              <form class="form-floating">
-                <input
+          </b-td>
+        </b-tr>
+        <b-tr>
+          <b-th>対象仕訳番号</b-th>
+          <b-td>
+            <b-div class="mb-3">
+              <b-form class="form-floating">
+                <b-input
                   type="text"
                   class="form-control"
                   id="floatingInputValue"
@@ -26,8 +24,8 @@
                   value="0000000"
                 />
                 <label for="floatingInputValue">仕訳番号</label>
-              </form>
-            </div>
+              </b-form>
+            </b-div>
             <p>から</p>
             <div>
               <form class="form-floating">
@@ -41,8 +39,8 @@
                 <label for="floatingInputValue">仕訳番号</label>
               </form>
             </div>
-          </td>
-        </tr>
+          </b-td>
+        </b-tr>
         <tr>
           <th>対象日付範囲</th>
           <td>
@@ -257,8 +255,8 @@
             </div>
           </td>
         </tr>
-      </tbody>
-    </table>
+      </b-thead>
+    </b-table>
     <div class="d-grid gap-2 d-md-flex justify-content-md-end">
       <a href="/demo/bookKeepingJournal/search#search" class="btn btn-primary" tabindex="-1" role="button" aria-disabled="true">表示</a>
       <!-- <button class="btn btn-primary me-md-2" type="button">表示</button> -->
