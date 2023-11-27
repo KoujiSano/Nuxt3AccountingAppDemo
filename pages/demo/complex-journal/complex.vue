@@ -1,57 +1,78 @@
 <template>
-    <h1>複合仕訳入力</h1>
 <div class="container">
-    <h2>仕訳帳</h2>
-  <table class="table">
-    <thead>
-      <tr>
-        <th>年度<DropdownMenu :options="menu1Options" /></th>
-        <th>区分<DropdownMenu :options="menu2Options" /></th>
-        <th>会計単位<DropdownMenu :options="menu3Options" /></th>
-        <th>消費税<DropdownMenu :options="menu4Options" /></th>
-        <th>対象期間<DropdownMenu :options="menu5Options" /></th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>科目</td>
-        <td>補助</td>
-        <td>名称</td>
-        <td>金額</td>
-        <td>消費税区分</td>
-        <td>消費税</td>
-        <td>部門</td>
-        <td>摘要</td>
-      </tr>
-    </tbody>
-  </table>
+  <div class="card">
+    <div class="card-body">
+      <h1>複合仕訳入力</h1>
+      <div class="row">
+        <div class="col-6">
+          <div class="input-group mb-3">
+            <span class="input-group-text"><h2>仕訳帳</h2></span>
+            <thead>
+              <tr>
+                <th>年度<ReusableSelect :options="select1Options" :size="select1Size" /></th>
+                <th>区分<ReusableSelect :options="select2Options" :size="select2Size" /></th>
+                <th>会計単位<ReusableSelect :options="select3Options" :size="select3Size" /></th>
+                <th>消費税<ReusableSelect :options="select4Options" :size="select4Size" /></th>
+                <th>対象期間<ReusableSelect :options="select5Options" :size="select5Size" /></th>
+              </tr>
+            </thead>
+          </div>
+            <tbody>
+              <tr>
+                <span class="input-group-text"><td>科目</td></span>
+                <input type="text" class="form-control" aria-label="jurnaNo">
+                <span class="input-group-text"><td>補助</td></span>
+                <input type="text" class="form-control" aria-label="jurnaNo">
+                <span class="input-group-text"><td>名称</td></span>
+                <input type="text" class="form-control" aria-label="jurnaNo">
+                <span class="input-group-text"><td>金額</td></span>
+                <input type="text" class="form-control" aria-label="jurnaNo">
+                <span class="input-group-text"><td>消費税区分</td></span>
+                <input type="text" class="form-control" aria-label="jurnaNo">
+                <span class="input-group-text"><td>消費税</td></span>
+                <input type="text" class="form-control" aria-label="jurnaNo">
+                <span class="input-group-text"><td>部門</td></span>
+                <input type="text" class="form-control" aria-label="jurnaNo">
+                <span class="input-group-text"><td>摘要</td></span>
+                <input type="text" class="form-control" aria-label="jurnaNo">
+              </tr>
+            </tbody>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 </template>
 
 <script setup>
-import DropdownMenu from '~/components/DropdownMenu-kubo.vue';
+import ReusableSelect from '~/components/ReusableSelect.vue';
 
-const menu1Options = [
+const select1Options = [
   { label: '2023', value: 'optionA' },
+  { label: '2024', value: 'optionB' },
 ];
+const select1Size = '70px';
 
-const menu2Options = [
-  { label: '月次', value: 'optionX' },
-  { label: '決算（中間）', value: 'optionY' },
-  { label: '決算（期末）', value: 'optionZ' },
-  { label: '決算再振替', value: 'optionα' },
-  { label: '期中', value: 'optionω' },
+const select2Options = [
+  { label: '月次', value: 'optionA' },
+  { label: '決算（中間）', value: 'optionB' },
+  { label: '決算（期末）', value: 'optionC' },
+  { label: '決算再振替', value: 'optionD' },
+  { label: '期中', value: 'optionE' },
 ];
+const select2Size = '115px';
 
-const menu3Options = [
-  { label: '本社', value: 'optionX' },
+const select3Options = [
+  { label: '本社', value: 'optionE' },
 ];
+const select3Size = '70px';
 
-const menu4Options = [
-  { label: '原則課税/税抜処理', value: 'optionA' },
+const select4Options = [
+  { label: '原則課税/税抜処理', value: 'optionG' },
 ];
+const select4Size = '170px';
 
-const menu5Options = [
+const select5Options = [
   { label: '2023/1/1 ~ 2023/1/30', value: 'optionA' },
   { label: '2023/2/1 ~ 2023/2/28', value: 'optionB' },
   { label: '2023/3/1 ~ 2023/3/31', value: 'optionC' },
@@ -64,6 +85,7 @@ const menu5Options = [
   { label: '2023/10/1 ~ 2023/10/31', value: 'optionJ' },
   { label: '2023/11/1 ~ 2023/11/30', value: 'optionK' },
   { label: '2023/12/1 ~ 2023/12/31', value: 'optionL' },
-
 ];
+const select5Size = '200px';
+
 </script>

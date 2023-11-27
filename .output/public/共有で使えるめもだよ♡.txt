@@ -1,0 +1,26 @@
+✨Publicにある画像の入れ方
+src="/hoge.png"
+パスが簡単ですごーい🙆🏻‍♂️
+
+✨サイトにタイトルをつける方法
+<script setup lang="ts">
+useHead({ title: 'にゃんにゃん～' })
+</script>
+これを一番上に入れればおけ～🤩
+
+✨composablesを使ってページ遷移後にも情報を保持する方法
+1.composablesの中に"名前".tsを作成して関数を作ろう！
+export const "name" = () => {
+    return useState<any>('data', () => "なーん..にゃん")
+  }
+
+2.vueファイルのscriptに下記を追加！
+<script setup lang="ts">
+import { name } from '@/composables/"名前"'
+const "hoge" = name()
+</script>
+
+3.表示させてみよう～
+<p>{{ hoge }}<p>
+
+(これを使えばどこでもユーザー情報を表示できるようになるかも！)

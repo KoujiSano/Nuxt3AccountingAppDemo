@@ -1,3 +1,10 @@
+<script setup lang="ts">
+import { yeardata,kubundata } from '@/composables/DarknessData'
+useHead({ title: '決算報告書' })
+const year = yeardata()
+const kubun = kubundata()
+const setkubun = (kbn:any) => (kubun.value = kbn)
+</script>
 <template>
   <container class="container">
     <div>
@@ -5,18 +12,19 @@
       <Card class="text-center">
         <CardHeader class="text-center">年度</CardHeader>
         <ListGroupItem class="m-3">
-          <BFormSelect aria-label="Default select example">
-            <b-option value="1"> 2023 </b-option>
-            <b-option value="2"> 19XX </b-option>
-          </BFormSelect>
+          <select aria-label="Default select example" v-model="year">
+            <option hidden>選択してください</option>
+            <option> 2023 </option>
+            <option> 19XX </option>
+          </select>
         </ListGroupItem>
         <CardHeader class="text-center">決算区分</CardHeader>
         <ListGroupItem class="m-3">
           <ButtonGroup aria-label="Basic checkbox toggle button group">
-            <RadioToggleButton name="btnradio-kbn" button="outline-success" @click="dataset('期末決算')">
+            <RadioToggleButton name="btnradio-kbn" button="outline-success" @click="() => setkubun('期末決算')">
               期末決算
             </RadioToggleButton>
-            <RadioToggleButton name="btnradio-kbn" button="outline-danger" @click="dataset('中間決算')">
+            <RadioToggleButton name="btnradio-kbn" button="outline-danger" @click="() => setkubun('中間決算')">
               中間決算
             </RadioToggleButton>
           </ButtonGroup>
@@ -86,6 +94,3 @@
 </template>
 
 <style></style>
-
-<script lang="ts" setup>
-</script>
