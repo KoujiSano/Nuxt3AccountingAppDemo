@@ -264,7 +264,46 @@
             </td>
           </tr>
           <tr>
-            <th>端数処理</th>
+            <th>端数処理 (売上)</th>
+            <td>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="outputOrder"
+                  id="outputOrder1"
+                  checked
+                />
+                <label class="form-check-label" for="outputOrder1">
+                    切り捨て
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="outputOrder"
+                  id="outputOrder2"
+                />
+                <label class="form-check-label" for="outputOrder2">
+                    四捨五入
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="outputOrder"
+                  id="outputOrder2"
+                />
+                <label class="form-check-label" for="outputOrder2">
+                    切り上げ
+                </label>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <th>端数処理 (仕入)</th>
             <td>
               <div class="form-check">
                 <input
