@@ -1,7 +1,7 @@
 <template>
 	<div class="container pb-4">
 		<header>
-			<h1><NuxtLink to="/demo/home">会計</NuxtLink></h1>
+			<h1><NuxtLink to="/">会計</NuxtLink></h1>
 		</header>
 	</div>
 </template>

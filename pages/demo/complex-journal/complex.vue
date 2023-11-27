@@ -1,30 +1,46 @@
 <template>
-    <h1>複合仕訳入力</h1>
 <div class="container">
-    <h2>仕訳帳</h2>
-  <table class="table">
-    <thead>
-      <tr>
-        <th>年度<ReusableSelect :options="select1Options" :size="select1Size" /></th>
-        <th>区分<ReusableSelect :options="select2Options" :size="select2Size" /></th>
-        <th>会計単位<ReusableSelect :options="select3Options" :size="select3Size" /></th>
-        <th>消費税<ReusableSelect :options="select4Options" :size="select4Size" /></th>
-        <th>対象期間<ReusableSelect :options="select5Options" :size="select5Size" /></th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>科目</td>
-        <td>補助</td>
-        <td>名称</td>
-        <td>金額</td>
-        <td>消費税区分</td>
-        <td>消費税</td>
-        <td>部門</td>
-        <td>摘要</td>
-      </tr>
-    </tbody>
-  </table>
+  <div class="card">
+    <div class="card-body">
+      <h1>複合仕訳入力</h1>
+      <div class="row">
+        <div class="col-6">
+          <div class="input-group mb-3">
+            <span class="input-group-text"><h2>仕訳帳</h2></span>
+            <thead>
+              <tr>
+                <th>年度<ReusableSelect :options="select1Options" :size="select1Size" /></th>
+                <th>区分<ReusableSelect :options="select2Options" :size="select2Size" /></th>
+                <th>会計単位<ReusableSelect :options="select3Options" :size="select3Size" /></th>
+                <th>消費税<ReusableSelect :options="select4Options" :size="select4Size" /></th>
+                <th>対象期間<ReusableSelect :options="select5Options" :size="select5Size" /></th>
+              </tr>
+            </thead>
+          </div>
+            <tbody>
+              <tr>
+                <span class="input-group-text"><td>科目</td></span>
+                <input type="text" class="form-control" aria-label="jurnaNo">
+                <span class="input-group-text"><td>補助</td></span>
+                <input type="text" class="form-control" aria-label="jurnaNo">
+                <span class="input-group-text"><td>名称</td></span>
+                <input type="text" class="form-control" aria-label="jurnaNo">
+                <span class="input-group-text"><td>金額</td></span>
+                <input type="text" class="form-control" aria-label="jurnaNo">
+                <span class="input-group-text"><td>消費税区分</td></span>
+                <input type="text" class="form-control" aria-label="jurnaNo">
+                <span class="input-group-text"><td>消費税</td></span>
+                <input type="text" class="form-control" aria-label="jurnaNo">
+                <span class="input-group-text"><td>部門</td></span>
+                <input type="text" class="form-control" aria-label="jurnaNo">
+                <span class="input-group-text"><td>摘要</td></span>
+                <input type="text" class="form-control" aria-label="jurnaNo">
+              </tr>
+            </tbody>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 </template>
 
@@ -47,12 +63,12 @@ const select2Options = [
 const select2Size = '115px';
 
 const select3Options = [
-  { label: '本社', value: 'optionA' },
+  { label: '本社', value: 'optionE' },
 ];
-const select3Size = '60px';
+const select3Size = '70px';
 
 const select4Options = [
-  { label: '原則課税/税抜処理', value: 'optionA' },
+  { label: '原則課税/税抜処理', value: 'optionG' },
 ];
 const select4Size = '170px';
 
