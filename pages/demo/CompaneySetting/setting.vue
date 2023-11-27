@@ -6,15 +6,11 @@
             </div>
             <table class="table table-bordered">
                 <tr>
-          <th>旗首日</th>
-          <td>
-            <select class="form-select" aria-label="選択してください。">
-              <option value="1">本社</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
-            </select>
-          </td>
-        </tr>
+                    <th>旗首日</th>
+                    <td>
+                        <input>
+                    </td>
+                </tr>
             </table>
             <div id="passwordHelpBlock" class="form-text">
                 <h5>* 会計年度 2023年<br>
@@ -35,6 +31,11 @@
                 <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
                 <label class="form-check-label" for="inlineCheckbox2">月毎にリセット</label>
             </div>
+            tr>
+                    <th>決算期</th>
+                    <td>
+                        <input>
+                    </td>
         </div>
     </div>
     <div>
