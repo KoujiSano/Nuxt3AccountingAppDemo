@@ -15,11 +15,15 @@
             </div>
             <div class="form-check form-check-inline">
                 <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                <label class="form-check-label" for="inlineCheckbox1">1</label>
+                <label class="form-check-label" for="inlineCheckbox1">リセットしない</label>
             </div>
             <div class="form-check form-check-inline">
                 <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                <label class="form-check-label" for="inlineCheckbox2">2</label>
+                <label class="form-check-label" for="inlineCheckbox2">年毎にリセット</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                <label class="form-check-label" for="inlineCheckbox2">月毎にリセット</label>
             </div>
         </div>
     </div>
