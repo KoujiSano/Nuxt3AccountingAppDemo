@@ -41,62 +41,57 @@
             </td>
             </tr>
         </tbody>
-        </table>
-        </b-div>
-        <b-div padding="t-3" class="d-flex justify-content-start align-items-center p-3">
-            <b-button button="outline-primary" margin="e-2">
-                ＜前月
-            </b-button>
-            <h2 margin="e-2">9月</h2>
-            <b-button button="outline-primary" margin="e-2">
-                翌月＞
-            </b-button>
-        </b-div>
-        <b-div>
-            <b-table bordered>
-                <b-thead>
-                    <b-tr text-alignment="center" text-wrap="nowrap">
-                        <b-th scope="col" col="xs-2 sm-1">
-                        日付
-                        </b-th>
-                        <b-th scope="col" col="xs-2 sm-1">
-                        摘要
-                        </b-th>
-                        <b-th scope="col" col="xs-6 sm-3" >
-                        科目
-                        </b-th>
-                        <b-th scope="col" col="sm-3">
-                        支払い金額
-                        </b-th>
-                        <b-th scope="col" col="sm-1" >
-                        預かり金額
-                        </b-th>
-                        <b-th scope="col" col="xs-1 sm-1">
-                        差引残高
-                        </b-th>
-                        <b-th scope="col" col="xs-1 sm-1">
-                        付箋
-                        </b-th>
-                    </b-tr>
-                </b-thead>
-                <b-tbody>
-                    <b-tr>
-                        <b-td scope="row" text-alignment="center">
-                            <b-a href="#">
-                                変更
-                            </b-a>
-                        </b-td>
-                        <b-td text-alignment="left">Cell</b-td>
-                        <b-td text-alignment="left">Cell</b-td>
-                        <b-td text-alignment="left">Cell</b-td>
-                        <b-td text-alignment="left">Cell</b-td>
-                        <b-td text-alignment="center">Cell</b-td>
-                        <b-td text-alignment="center">Cell</b-td>
-                    </b-tr>
-                </b-tbody>
-            </b-table>
-        </b-div>
-    </Container>
-  </div>
-  <!--今後->賃借対照表、損益計算書ボタンでの切り替え機能を実装予定。-->
+    </table>
+</b-div>
+<b-div padding="t-3" class="d-flex justify-content-start align-items-center p-3">
+    <b-button button="outline-primary" margin="e-2">
+        ＜前月
+    </b-button>
+    <h2 margin="e-2">9月</h2>
+    <b-button button="outline-primary" margin="e-2">
+        翌月＞
+    </b-button>
+</b-div>
+<b-div>
+    <b-table bordered>
+        <b-thead>
+            <b-tr text-alignment="center" text-wrap="nowrap">
+                <b-th scope="col" col="xs-2 sm-2">
+                    日付
+                </b-th>
+                <b-th scope="col" col="xs-3 sm-3">
+                    摘要
+                </b-th>
+                <b-th scope="col" col="xs-3 sm-3">
+                    科目
+                </b-th>
+                <b-th scope="col" col="xs-2 sm-2">
+                    支払い金額
+                </b-th>
+            <b-th scope="col" col="xs-2 sm-2">
+                預かり金額
+            </b-th>
+            <b-th scope="col" col="xs-2 sm-2">
+                差引残高
+            </b-th>
+            <b-th scope="col" col="xs-1 sm-1">
+                付箋
+            </b-th>
+        </b-tr>
+    </b-thead>
+</b-table>
+<b-table bordered>
+<b-tbody>
+    <b-tr text-wrap="nowrap">
+            <b-td class="text-right">
+                10
+            </b-td>
+        <b-td scope="col" col="xs-2 sm-2">Cell 1</b-td>
+    </b-tr>
+</b-tbody>
+
+</b-table>
+</b-div>
+</Container>
+</div>
   </template>
