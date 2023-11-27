@@ -219,7 +219,7 @@
             </td>
           </tr>
           <tr>
-            <th>出力順</th>
+            <th>決算</th>
             <td>
               <div class="form-check">
                 <input
@@ -230,7 +230,7 @@
                   checked
                 />
                 <label class="form-check-label" for="outputOrder1">
-                  仕訳日付
+                    中間決算と期末決算
                 </label>
               </div>
               <div class="form-check">
@@ -241,28 +241,13 @@
                   id="outputOrder2"
                 />
                 <label class="form-check-label" for="outputOrder2">
-                  入力日付
-                </label>
-              </div>
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="outputOrder"
-                  id="outputOrder3"
-                />
-                <label class="form-check-label" for="outputOrder3">
-                  仕訳番号
+                    四半期決算
                 </label>
               </div>
             </td>
           </tr>
         </tbody>
       </table>
-      <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-        <a href="/demo/bookKeepingJournal/search#search" class="btn btn-primary" tabindex="-1" role="button" aria-disabled="true">表示</a>
-        <!-- <button class="btn btn-primary me-md-2" type="button">表示</button> -->
-      </div>
     </div>
   </template>
   
