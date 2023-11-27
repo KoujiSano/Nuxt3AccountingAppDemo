@@ -1,5 +1,6 @@
 <template>
-  <div>
+  <div id="search">
+    <h2>検索結果</h2>
     <table class="table">
       <thead>
         <tr>
