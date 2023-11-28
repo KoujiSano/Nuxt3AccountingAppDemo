@@ -1,22 +1,19 @@
 <script setup lang="ts">
-import { yeardata,kubundata,userdata } from '@/composables/DarknessData'
+import { userdata } from '@/composables/DarknessData'
 useHead({ title: '決算報告書' })
-const year = yeardata()
-const kubun = kubundata()
-const User = userdata()
-const setkubun = (kbn:any) => (User.value.Kubun= kbn)
+const KessanData = userdata()
+const setkubun = (kbn:any) => (KessanData.value.Kubun= kbn)
 </script>
 <template>
-  <container class="container">
-    <div>
+    <Container>
       <h1 class="mb-3">Xx刹那漆黒xX決算報告書</h1>
       <Card class="text-center">
         <CardHeader class="text-center">年度</CardHeader>
         <ListGroupItem class="m-3">
-          <select aria-label="Default select example" v-model="User.Year">
-            <option hidden>選択してください</option>
-            <option> 2023 </option>
-            <option> 19XX </option>
+          <select aria-label="Default select example" v-model="KessanData.Year">
+            <b-option hidden>選択してください</b-option >
+            <b-option value="2000"> 2023 </b-option >
+            <b-option value="2021"> 2022 </b-option>
           </select>
         </ListGroupItem>
         <CardHeader class="text-center">決算区分</CardHeader>
@@ -90,8 +87,7 @@ const setkubun = (kbn:any) => (User.value.Kubun= kbn)
       <b-a button="primary" href="/demo/Darkness_KessanHoukoku_MARK_V1_mp5/KessanHoukoku_info" class="m-2">
         報告書情報設定
       </b-a>
-    </div>
-  </container>
+    </Container>
 </template>
 
 <style></style>
