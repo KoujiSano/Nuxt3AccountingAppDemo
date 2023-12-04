@@ -20,6 +20,7 @@
               <NuxtLink to="/accountledger" class="card-link">総勘定元帳</NuxtLink>
             </li>
             <li class="list-group-item"><NuxtLink to="/demo/hojomototyou/subledger" class="card-link">補助元帳</NuxtLink></li>
+            <li class="list-group-item"><NuxtLink to="/demo/Accounting book/accounting book" class="card-link">出納帳</NuxtLink></li>
           </ul>
         </div>
       </div>
