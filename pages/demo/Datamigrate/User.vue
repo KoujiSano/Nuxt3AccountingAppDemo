@@ -1,5 +1,5 @@
 <template>
     <div>
-        <VarioussettingsUser />
+        <DataMigrateUser />
     </div>
 </template>

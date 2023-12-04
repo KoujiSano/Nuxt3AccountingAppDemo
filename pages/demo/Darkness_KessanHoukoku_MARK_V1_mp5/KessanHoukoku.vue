@@ -12,8 +12,8 @@ const setkubun = (kbn:any) => (KessanData.value.Kubun= kbn)
         <ListGroupItem class="m-3">
           <select aria-label="Default select example" v-model="KessanData.Year">
             <b-option hidden>選択してください</b-option >
-            <b-option value="2000"> 2023 </b-option >
-            <b-option value="2021"> 2022 </b-option>
+            <b-option value="2023"> 2023 </b-option >
+            <b-option value="2022"> 2022 </b-option>
           </select>
         </ListGroupItem>
         <CardHeader class="text-center">決算区分</CardHeader>
@@ -82,10 +82,13 @@ const setkubun = (kbn:any) => (KessanData.value.Kubun= kbn)
         </ListGroupItem>
       </Card>
       <b-a button="primary" href="/demo/Darkness_KessanHoukoku_MARK_V1_mp5/KessanHoukoku_info" class="m-2">
-        報告書情報設定
+        決算情報設定
       </b-a>
-      <b-a button="primary" href="/demo/Darkness_KessanHoukoku_MARK_V1_mp5/KessanHoukoku_info" class="m-2">
-        報告書情報設定
+      <b-a button="primary" href="/demo/Darkness_KessanHoukoku_MARK_V1_mp5/KessanHoukoku_chuki" class="m-2">
+        注記設定
+      </b-a>
+      <b-a button="primary" href="/demo/Darkness_KessanHoukoku_MARK_V1_mp5/KessanHoukoku_syousai" class="m-2">
+        変動理由詳細設定
       </b-a>
     </Container>
 </template>

@@ -1,5 +1,5 @@
 export const userdata = () => {
-    return useState('KessanData', () => shallowRef({
+    return useState('KessanData', () => ({
         Fiscal_year_end: "第壱刻",
         Kubun: "なーん..にゃん",
         Year: "1341",
@@ -7,7 +7,7 @@ export const userdata = () => {
 }
 
 export const chuki = () => {
-    return useState('ChukiData', () => shallowRef({
+    return useState('ChukiData', () => ({
         Keizoku:"にゃー", 
         Jyuyou:"にゃーん", 
         Tintai:"にゃおーん", 
