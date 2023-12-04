@@ -1,5 +1,5 @@
 <template>
-        <div class="conatiner-sm">
+    <div>
         <VarioussettingsUser />
     </div>
 </template>
