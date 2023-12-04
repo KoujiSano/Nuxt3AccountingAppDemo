@@ -1,3 +1,5 @@
+
+import type { NuxtLink } from '#build/components';
 <template>
     <Card
     text-color="dark"
@@ -13,4 +15,7 @@
         </CardText>
     </CardBody>
   </Card>
+   <p>移行コードは発行されていません。</p>
+   <NuxtLink to="https://mp-accounts.yenbo.jp/office/transfer-suite/index"></NuxtLink>
+   <p>から申し込むことで移行コードが発行されます。</p>
 </template>
