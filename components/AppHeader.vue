@@ -1,7 +1,20 @@
+<script setup lang="ts">
+import { PublicUser } from '@/composables/UserData'
+const User = PublicUser()
+</script>
 <template>
 	<div class="container pb-4">
 		<header>
-			<h1><NuxtLink to="/">会計</NuxtLink></h1>
+			<Row auto align-items="center">
+				<Col>
+				<h1>
+					<NuxtLink to="/">会計</NuxtLink>
+				</h1>
+				</Col>
+				<Col>
+				<div> {{User.CompanyName}} / {{ User.Name }} </div>
+				</Col>
+			</Row>
 		</header>
 	</div>
 </template>
@@ -12,14 +25,16 @@ header {
 	padding: 20px;
 	background-color: #BBBBBB;
 }
+
 header a {
-    color: #fff;
+	color: #fff;
 	text-decoration: none;
 }
+
 header a:visited {
-    color: #fff;
+	color: #fff;
 }
+
 header a:hover {
-    color: #fff;
-}
-</style>
+	color: #fff;
+}</style>

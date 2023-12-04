@@ -180,7 +180,7 @@
             </td>
           </tr>
           <tr>
-            <th>入力種類区分</th>
+            <th>業者区分</th>
             <td>
               <div class="form-check">
                 <input
@@ -191,7 +191,7 @@
                   checked
                 />
                 <label class="form-check-label" for="inputTypeClassification1">
-                  全件
+                  課税
                 </label>
               </div>
               <div class="form-check">
@@ -202,7 +202,24 @@
                   id="inputTypeClassification2"
                 />
                 <label class="form-check-label" for="inputTypeClassification2">
-                  通常入力
+                  免税
+                </label>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <th>経理処理付方式</th>
+            <td>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="inputTypeClassification"
+                  id="inputTypeClassification1"
+                  checked
+                />
+                <label class="form-check-label" for="inputTypeClassification1">
+                  税抜処理
                 </label>
               </div>
               <div class="form-check">
@@ -210,16 +227,44 @@
                   class="form-check-input"
                   type="radio"
                   name="inputTypeClassification"
-                  id="inputTypeClassification3"
+                  id="inputTypeClassification2"
                 />
-                <label class="form-check-label" for="inputTypeClassification3">
-                  データ読み込み
+                <label class="form-check-label" for="inputTypeClassification2">
+                  税込処理
                 </label>
               </div>
             </td>
           </tr>
           <tr>
-            <th>決算</th>
+            <th>業者区分</th>
+            <td>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="inputTypeClassification"
+                  id="inputTypeClassification1"
+                  checked
+                />
+                <label class="form-check-label" for="inputTypeClassification1">
+                  課税
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="inputTypeClassification"
+                  id="inputTypeClassification2"
+                />
+                <label class="form-check-label" for="inputTypeClassification2">
+                  免税
+                </label>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <th>端数処理 (売上)</th>
             <td>
               <div class="form-check">
                 <input
@@ -230,7 +275,7 @@
                   checked
                 />
                 <label class="form-check-label" for="outputOrder1">
-                    中間決算と期末決算
+                    切り捨て
                 </label>
               </div>
               <div class="form-check">
@@ -241,7 +286,57 @@
                   id="outputOrder2"
                 />
                 <label class="form-check-label" for="outputOrder2">
-                    四半期決算
+                    四捨五入
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="outputOrder"
+                  id="outputOrder2"
+                />
+                <label class="form-check-label" for="outputOrder2">
+                    切り上げ
+                </label>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <th>端数処理 (仕入)</th>
+            <td>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="outputOrder"
+                  id="outputOrder1"
+                  checked
+                />
+                <label class="form-check-label" for="outputOrder1">
+                    切り捨て
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="outputOrder"
+                  id="outputOrder2"
+                />
+                <label class="form-check-label" for="outputOrder2">
+                    四捨五入
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="outputOrder"
+                  id="outputOrder2"
+                />
+                <label class="form-check-label" for="outputOrder2">
+                    切り上げ
                 </label>
               </div>
             </td>
@@ -250,4 +345,3 @@
       </table>
     </div>
   </template>
-  
