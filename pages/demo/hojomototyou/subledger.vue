@@ -1,5 +1,5 @@
 <template>
-    <div class="container p-4">
+    <div class="p-4">
         <Card style="width: auto">
             <CardHeader class="text-center">会計単位</CardHeader>
                 <ListGroup flush class="text-center">
@@ -35,24 +35,7 @@
                             </b-option>
                         </BFormSelect>
                 </ListGroupItem>
-            <CardHeader class="text-center">補助科目
-                                <b-button
-                                button="secondary"
-                                toggle="collapse"
-                                target="#collapse1"
-                                >
-                                ?
-                                </b-button>
-                            </CardHeader>
-                            <Collapse id="collapse">
-                                <Card>
-                                <CardBody
-                                text-background="secondary-subtle"
-                                >
-                                範囲指定はPDF・CSV出力時のみ有効です<br>画面表示は下側の科目で検索を行います
-                                </CardBody>
-                                </Card>
-                            </Collapse>
+            <CardHeader class="text-center">補助科目</CardHeader>
                 <ListGroupItem>
                         <BFormSelect
                         margin="x-auto"
@@ -74,10 +57,10 @@
                 </ListGroupItem>
             <CardHeader class="text-center">年度</CardHeader>
                 <ListGroupItem>
-                    <BFormSelect
-                    margin="x-auto"
-                    relative-width="25"
-                    class="text-center">
+                  <BFormSelect
+                  margin="x-auto"
+                  relative-width="25"
+                  class="text-center">
                         <b-option selected>
                         2023
                         </b-option>
