@@ -1,34 +1,38 @@
 <template>
-    <div>
-       <table class="table">
-           <thead>
-               <tr>
-                   <th scope="col">#</th>
-                   <th scope="col">お名前</th>
-                   <th scope="col">所属部門</th>
-                   <th scope="col">権限</th>
-               </tr>
-           </thead>
-           <tbody>
-               <tr>
-                         <th scope="row">変更</th>
-                         <td>前田</td>
-                         <td>大然</td>
-                         <td>admin</td>
-                       </tr>
-                   <tr>
-                         <th scope="row">2</th>
-                         <td>Jacob</td>
-                         <td>Thornton</td>
-                         <td>@fat</td>
-                       </tr>
-                   <tr>
-                         <th scope="row"></th>
-                         <td colspan="2"></td>
-                         <td></td>
-                       </tr>
-            
-           </tbody>
-       </table>
-   </div>
-   </template>
+    <b-table>
+      <b-thead>
+        <b-tr>
+          <b-th scope="col">
+            #
+          </b-th>
+          <b-th scope="col">
+            お名前
+          </b-th>
+          <b-th scope="col">
+            所属部門
+          </b-th>
+          <b-th scope="col">
+            権限
+          </b-th>
+        </b-tr>
+      </b-thead>
+      <b-tbody>
+        <b-tr>
+          <b-th scope="row">
+            変更
+          </b-th>
+          <b-td>kitagawa</b-td>
+          <b-td>kouta</b-td>
+          <b-td>admin</b-td>
+        </b-tr>
+        <b-tr>
+          <b-th scope="row">
+            変更
+          </b-th>
+          <b-td>LeBron</b-td>
+          <b-td>James</b-td>
+          <b-td>king</b-td>
+        </b-tr>
+      </b-tbody>
+    </b-table>
+  </template>
