@@ -22,26 +22,26 @@
                                     <b-option selected>
                                     100 現金
                                     </b-option>
-                                    <b-option selected>
+                                    <b-option value="1">
                                     101 小口現金
                                     </b-option>
-                                    <b-option selected>
+                                    <b-option value="2">
                                     110 当座預金
                                     </b-option>
-                                    <b-option selected>
+                                    <b-option value="3">
                                     115 普通預金
                                     </b-option>
-                                    <b-option selected>
+                                    <b-option value="4">
                                     120 通知預金
                                     </b-option>
-                                    <b-option selected>
+                                    <b-option value="5">
                                     124 定期預金
-                                    </b-option><b-option selected>
+                                    </b-option><b-option value="6">
                                     128 定期積金
                                     </b-option>
-                                    <b-option selected>
+                                    <b-option value="7">
                                     129 別段預金
-                                    </b-option><b-option selected>
+                                    </b-option><b-option value="8">
                                     130 郵便貯金
                                     </b-option>
                                 </BFormSelect>
