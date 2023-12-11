@@ -1,6 +1,9 @@
 <script setup lang="ts">
+import { publicData } from '~/composables/usePublicData';
+
+const user = publicData();
 const financialData = userData();
-const User = pData();
+
 
 </script>
 
@@ -37,7 +40,7 @@ const User = pData();
         <BFormInput
           type="text"
           placeholder="決算期"
-          v-model="User.KessanKi"
+          v-model="user.KessanKi"
           aria-describedby="zyusyo1"
         >
         </BFormInput>
@@ -47,7 +50,7 @@ const User = pData();
         <BFormInput
           type="text"
           placeholder="会社名称"
-          v-model="User.CompanyName"
+          v-model="user.CompanyName"
           aria-describedby="zyusyo1"
         >
         </BFormInput>
@@ -58,7 +61,7 @@ const User = pData();
         <BFormInput
           type="text"
           placeholder="住所"
-          v-model="User.Address"
+          v-model="user.Address"
           aria-describedby="zyusyo1"
         >
         </BFormInput>
@@ -68,7 +71,7 @@ const User = pData();
         <BFormInput
           type="text"
           placeholder="住所2"
-          v-model="User.Address2"
+          v-model="user.Address2"
           aria-describedby="zyusyo1"
         >
         </BFormInput>

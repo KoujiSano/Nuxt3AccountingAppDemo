@@ -1,4 +1,4 @@
-export const pData = () => {
+export const publicData = () => {
     return useState("publicData",() => ({
         Name: "ブラック黒之介",
         CompanyName: "漆黒かんぱに～",
