@@ -1,9 +1,7 @@
 <script setup lang="ts">
-useHead({ title: "決算報告書情報設定" });
-import { userdata } from "@/composables/DarknessData";
-import { PublicUser } from "@/composables/UserData";
-const KessanData = userdata();
-const User = PublicUser();
+const financialData = userData();
+const User = pData();
+
 </script>
 
 <template>
@@ -13,11 +11,11 @@ const User = PublicUser();
       <Card class="text-center m-2">
         <CardHeader class="text-center">会計年度</CardHeader>
         <ListGroupItem class="m-3">
-          <h2>{{ KessanData.Year }}</h2>
+          <h2>{{ financialData.Year }}</h2>
         </ListGroupItem>
         <CardHeader class="text-center">決算区分</CardHeader>
         <ListGroupItem class="m-3">
-          <h2>{{ KessanData.Kubun }}</h2>
+          <h2>{{ financialData.Kubun }}</h2>
         </ListGroupItem>
         <CardHeader class="text-center">会計期間</CardHeader>
         <ListGroupItem class="m-3">
@@ -77,7 +75,7 @@ const User = PublicUser();
       </BInputGroup>
       <b-a
         button="primary"
-        href="/demo/Darkness_KessanHoukoku_MARK_V1_mp5/KessanHoukoku"
+        href="/demo/financial-statement/KessanHoukoku"
         class="m-2"
       >
         確認

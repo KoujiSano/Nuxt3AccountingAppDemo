@@ -28,7 +28,7 @@
         <div class="card">
           <div class="card-header">年次決算</div>
           <ul class="list-group list-group-flush">
-            <li class="list-group-item"><NuxtLink to="/demo/Darkness_KessanHoukoku_MARK_V1_mp5/KessanHoukoku" class="card-link">決算報告書</NuxtLink></li>
+            <li class="list-group-item"><NuxtLink to="/demo/financial-statement/financial-statement" class="card-link">決算報告書</NuxtLink></li>
           </ul>
         </div>
       </div>

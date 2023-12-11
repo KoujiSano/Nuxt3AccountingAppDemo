@@ -1,8 +1,6 @@
 <script setup lang="ts">
-import { userdata } from '@/composables/DarknessData'
-useHead({ title: '決算報告書' })
-const KessanData = userdata()
-const setkubun = (kbn:any) => (KessanData.value.Kubun= kbn)
+const financialData = userData();
+const setkubun = (kbn:any) => (financialData.value.Kubun= kbn)
 </script>
 <template>
     <Container>
@@ -10,7 +8,7 @@ const setkubun = (kbn:any) => (KessanData.value.Kubun= kbn)
       <Card class="text-center">
         <CardHeader class="text-center">年度</CardHeader>
         <ListGroupItem class="m-3">
-          <select aria-label="Default select example" v-model="KessanData.Year">
+          <select aria-label="Default select example" v-model="financialData.Year">
             <b-option hidden>選択してください</b-option >
             <b-option value="2023"> 2023 </b-option >
             <b-option value="2022"> 2022 </b-option>
@@ -81,13 +79,13 @@ const setkubun = (kbn:any) => (KessanData.value.Kubun= kbn)
           </ButtonGroup>
         </ListGroupItem>
       </Card>
-      <b-a button="primary" href="/demo/Darkness_KessanHoukoku_MARK_V1_mp5/KessanHoukoku_info" class="m-2">
+      <b-a button="primary" href="/demo/financial-statement/info" class="m-2">
         決算情報設定
       </b-a>
-      <b-a button="primary" href="/demo/Darkness_KessanHoukoku_MARK_V1_mp5/KessanHoukoku_chuki" class="m-2">
+      <b-a button="primary" href="/demo/financial-statement/annotation-settings" class="m-2">
         注記設定
       </b-a>
-      <b-a button="primary" href="/demo/Darkness_KessanHoukoku_MARK_V1_mp5/KessanHoukoku_syousai" class="m-2">
+      <b-a button="primary" href="/demo/financial-statement/details" class="m-2">
         変動理由詳細設定
       </b-a>
     </Container>
