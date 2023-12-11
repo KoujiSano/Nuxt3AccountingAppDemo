@@ -14,7 +14,7 @@
         <div class="card">
           <div class="card-header">各種出力</div>
           <ul class="list-group list-group-flush">
-            <li class="list-group-item"><NuxtLink to="/demo/book-keeping-journal/journal-book" class="card-link">仕訳帳</NuxtLink></li>
+            <li class="list-group-item"><NuxtLink to="/demo/book-keeping-journal" class="card-link">仕訳帳</NuxtLink></li>
             <li class="list-group-item"><NuxtLink to="/demo/journaList_Search/search" class="card-link">仕訳検索</NuxtLink></li>
             <li class="list-group-item">
               <NuxtLink to="/accountledger" class="card-link">総勘定元帳</NuxtLink>
