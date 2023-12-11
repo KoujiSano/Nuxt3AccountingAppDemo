@@ -228,6 +228,11 @@
         </Col>
       </Row>
     </Card>
+    <Card class="mb">
+      <b-button button="primary" size="lg">
+        表示
+      </b-button>
+    </Card>
   </Container>
 
 </template>

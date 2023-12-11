@@ -4,19 +4,21 @@ src="/hoge.png"
 
 ✨サイトにタイトルをつける方法
 <script setup lang="ts">
-useHead({ title: 'にゃんにゃん～' })
+definePageMeta({
+  title: 'My home page'
+})
 </script>
 これを一番上に入れればおけ～🤩
 
 ✨composablesを使ってページ遷移後にも情報を保持する方法
 1.composablesの中に"DarkSide".tsを作成して関数を作ろう！
-export const "OtakuMoe" = () => {
-    return useState<any>('data', () => "なーん..にゃん")
+export const OtakuMoe = () => {
+    return useState<any>(() => "なーん..にゃん")
   }
 
 (🧨オブジェクトを使う場合)
-export const "OtakuMoe" = () => {
-    return useState('User', () => shallowRef({
+export const OtakuMoe = () => {
+    return useState(() => ({
         Cloe: "＼(^o^)／",
         Mona: "オマエモナー",
     }))
@@ -24,7 +26,6 @@ export const "OtakuMoe" = () => {
 
 2.vueファイルのscriptに下記を追加！
 <script setup lang="ts">
-import { OtakuMoe } from '@/composables/"DarkSide"'
 const "hoge" = OtakuMoe()
 </script>
 
@@ -34,13 +35,3 @@ const "hoge" = OtakuMoe()
 <p>{{ hoge.Cloe }}<p>
 
 (これを使えばどこでもユーザー情報を表示できるようになるかも😁)
-
-✨BFormSelectで選択したデータを表示させる方法
-<BFormSelect v-model="Nebula">
-  <b-option hidden>選択してください</b-option >
-  <b-option value="たけのこ"> たけのこ </b-option >
-  <b-option value="たけのこ"> きのこ </b-option>
-</BFormSelect>
-
-<b-option>にvalueを与えないと動かないようです🤧
-(拡張性はこっちの方が高くていいと思いますが、公式ドキュメントに明記されていないです。悲しみ)

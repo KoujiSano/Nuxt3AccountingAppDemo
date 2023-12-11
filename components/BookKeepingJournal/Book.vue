@@ -242,7 +242,7 @@
   </b-table>
   <div class="d-grid gap-2 d-md-flex justify-content-md-end">
     <a
-      href="/demo/bookKeepingJournal/search#search"
+      href="/demo/book-keeping-journal/search#search"
       class="btn btn-primary"
       tabindex="-1"
       role="button"

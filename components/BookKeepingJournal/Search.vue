@@ -1,15 +1,13 @@
 <template>
   <div id="search">
     <h2>検索結果</h2>
-    <table class="table">
-      <thead>
-        <tr>
-          <th scope="col">#</th>
-          <th scope="col">First</th>
-          <th scope="col">Last</th>
-          <th scope="col">Handle</th>
-        </tr>
-      </thead>
+    <b-table bordered>
+      <b-thead>
+        <b-tr>
+          <b-th class="text-center" scope="col">仕訳番号</b-th>
+          
+        </b-tr>
+      </b-thead>
       <tbody>
         <tr>
           <th scope="row">1</th>
@@ -29,6 +27,6 @@
           <td>@twitter</td>
         </tr>
       </tbody>
-    </table>
+    </b-table>
   </div>
 </template>
