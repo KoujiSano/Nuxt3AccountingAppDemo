@@ -5,7 +5,7 @@ import type { NuxtLink } from '#build/components';
     text-color="dark"
     background-color="info"
     margin="b-3"
-    style="max-width: 100rem"
+    style="max-width: 90rem"
   >
     <CardHeader>スイート会計シリーズへ移行</CardHeader>
     <CardBody>     
