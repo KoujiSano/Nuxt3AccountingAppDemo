@@ -14,7 +14,7 @@
         <div class="card">
           <div class="card-header">各種出力</div>
           <ul class="list-group list-group-flush">
-            <li class="list-group-item"><NuxtLink to="/demo/book-keeping-journal/journal-book" class="card-link">仕訳帳</NuxtLink></li>
+            <li class="list-group-item"><NuxtLink to="/demo/book-keeping-journal" class="card-link">仕訳帳</NuxtLink></li>
             <li class="list-group-item"><NuxtLink to="/demo/journaList_Search/search" class="card-link">仕訳検索</NuxtLink></li>
             <li class="list-group-item">
               <NuxtLink to="/accountledger" class="card-link">総勘定元帳</NuxtLink>
@@ -28,7 +28,7 @@
         <div class="card">
           <div class="card-header">年次決算</div>
           <ul class="list-group list-group-flush">
-            <li class="list-group-item"><NuxtLink to="/demo/Darkness_KessanHoukoku_MARK_V1_mp5/KessanHoukoku" class="card-link">決算報告書</NuxtLink></li>
+            <li class="list-group-item"><NuxtLink to="/demo/financial-statement/financial-statement" class="card-link">決算報告書</NuxtLink></li>
           </ul>
         </div>
       </div>
