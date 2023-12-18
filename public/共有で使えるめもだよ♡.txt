@@ -12,12 +12,12 @@ definePageMeta({
 
 ✨composablesを使ってページ遷移後にも情報を保持する方法
 1.composablesの中に"DarkSide".tsを作成して関数を作ろう！
-export const OtakuMoe = () => {
+export const "OtakuMoe" = () => {
     return useState<any>(() => "なーん..にゃん")
   }
 
 (🧨オブジェクトを使う場合)
-export const OtakuMoe = () => {
+export const "OtakuMoe" = () => {
     return useState(() => ({
         Cloe: "＼(^o^)／",
         Mona: "オマエモナー",

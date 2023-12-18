@@ -1,13 +1,13 @@
-export const userData = () => {
-    return useState("userData",() => ({
+export const userdata = () => {
+    return useState('KessanData', () => ({
         Fiscal_year_end: "第壱刻",
         Kubun: "なーん..にゃん",
         Year: "1341",
     }))
 }
 
-export const annotationData = () => {
-    return useState("annotationData",() => ({
+export const chuki = () => {
+    return useState('ChukiData', () => ({
         Keizoku:"にゃー", 
         Jyuyou:"にゃーん", 
         Tintai:"にゃおーん", 

@@ -1,10 +1,9 @@
 <script setup lang="ts">
-import { publicData } from '~/composables/usePublicData';
-
-const user = publicData();
-const financialData = userData();
-
-
+useHead({ title: "決算報告書情報設定" });
+import { userdata } from "@/composables/DarknessData";
+import { PublicUser } from "@/composables/UserData";
+const KessanData = userdata();
+const User = PublicUser();
 </script>
 
 <template>
@@ -14,11 +13,11 @@ const financialData = userData();
       <Card class="text-center m-2">
         <CardHeader class="text-center">会計年度</CardHeader>
         <ListGroupItem class="m-3">
-          <h2>{{ financialData.Year }}</h2>
+          <h2>{{ KessanData.Year }}</h2>
         </ListGroupItem>
         <CardHeader class="text-center">決算区分</CardHeader>
         <ListGroupItem class="m-3">
-          <h2>{{ financialData.Kubun }}</h2>
+          <h2>{{ KessanData.Kubun }}</h2>
         </ListGroupItem>
         <CardHeader class="text-center">会計期間</CardHeader>
         <ListGroupItem class="m-3">
@@ -40,7 +39,7 @@ const financialData = userData();
         <BFormInput
           type="text"
           placeholder="決算期"
-          v-model="user.KessanKi"
+          v-model="User.KessanKi"
           aria-describedby="zyusyo1"
         >
         </BFormInput>
@@ -50,7 +49,7 @@ const financialData = userData();
         <BFormInput
           type="text"
           placeholder="会社名称"
-          v-model="user.CompanyName"
+          v-model="User.CompanyName"
           aria-describedby="zyusyo1"
         >
         </BFormInput>
@@ -61,7 +60,7 @@ const financialData = userData();
         <BFormInput
           type="text"
           placeholder="住所"
-          v-model="user.Address"
+          v-model="User.Address"
           aria-describedby="zyusyo1"
         >
         </BFormInput>
@@ -71,14 +70,14 @@ const financialData = userData();
         <BFormInput
           type="text"
           placeholder="住所2"
-          v-model="user.Address2"
+          v-model="User.Address2"
           aria-describedby="zyusyo1"
         >
         </BFormInput>
       </BInputGroup>
       <b-a
         button="primary"
-        href="/demo/financial-statement/KessanHoukoku"
+        href="/demo/Darkness_KessanHoukoku_MARK_V1_mp5/KessanHoukoku"
         class="m-2"
       >
         確認
