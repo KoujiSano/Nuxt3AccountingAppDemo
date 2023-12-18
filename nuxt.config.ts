@@ -1,5 +1,10 @@
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
+    imports: {
+        dirs: [
+          // Scan top-level modules
+          'composables/**',]
+        },
     modules: [
         '@vueuse/nuxt',
         '@nuxt/content',
