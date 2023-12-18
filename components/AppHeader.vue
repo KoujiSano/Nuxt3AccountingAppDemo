@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { PublicUser } from '@/composables/UserData'
-const User = PublicUser()
+import { publicData } from '@/composables/usePublicData'
+const User = publicData()
 </script>
 <template>
 	<div class="container pb-4">
