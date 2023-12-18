@@ -47,6 +47,10 @@
 <script setup>
 import ReusableSelect from '~/components/ReusableSelect.vue';
 
+useHead({
+  title: 'My home page'
+})
+
 const select1Options = [
   { label: '2023', value: 'optionA' },
   { label: '2024', value: 'optionB' },
