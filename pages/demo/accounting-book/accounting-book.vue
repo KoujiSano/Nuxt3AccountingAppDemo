@@ -46,6 +46,17 @@
                                     </b-option>
                                 </BFormSelect>
                         </ListGroupItem>
+                        <CardHeader class="text-center">補助科目</CardHeader>
+                            <ListGroupItem>
+                                <BFormSelect
+                                margin="x-auto"
+                                relative-width="25"
+                                class="text-center">
+                                    <b-option selected>
+                                    補助科目なし
+                                    </b-option>
+                                </BFormSelect>
+                            </ListGroupItem>
                         <CardHeader class="text-center">年度</CardHeader>
                 <ListGroupItem>
                     <BFormSelect

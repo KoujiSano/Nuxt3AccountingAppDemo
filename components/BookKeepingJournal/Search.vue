@@ -4,11 +4,8 @@
     <b-table bordered>
       <b-thead>
         <b-tr>
-          <b-th class="text-center">仕訳番号</b-th>
-          <th scope="col">#</th>
-          <th scope="col">First</th>
-          <th scope="col">Last</th>
-          <th scope="col">Handle</th>
+          <b-th class="text-center" scope="col">仕訳番号</b-th>
+          
         </b-tr>
       </b-thead>
       <tbody>
