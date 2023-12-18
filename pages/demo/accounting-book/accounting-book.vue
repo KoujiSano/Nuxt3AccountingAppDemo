@@ -66,15 +66,6 @@
                         <b-option selected>
                         2023
                         </b-option>
-                        <b-option value="1">
-                        2022
-                        </b-option>
-                        <b-option value="2">
-                        2021
-                        </b-option>
-                        <b-option value="3">
-                        2020
-                        </b-option>
                     </BFormSelect>
                     <BFormCheck inline>
                         <BFormCheckInput value="option4" />
@@ -124,14 +115,11 @@
                         <BFormCheckInput value="option3" />
                         <BFormCheckLabel>3月</BFormCheckLabel>
                     </BFormCheck>
-                    <div class="text-center">
-                    月の範囲指定する場合は、対象月をクリックして選択してください。
-                    </div>
                 </ListGroupItem>
                 </ListGroup>
             </Card>
             <div class="text-center pt-4">
-                <b-button
+                <b-a
                 button="outline-dark"
                 size="lg"
                 type="button"
@@ -140,10 +128,10 @@
                 padding="3"
                 margin="b-5"
                 class="p-3"
-                href="./accounting-book_info.vue"
+                href="./accounting-book_info"
                 >
                 表示
-                </b-button>
+                </b-a>
             </div>
         </div>
 
