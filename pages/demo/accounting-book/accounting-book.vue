@@ -130,6 +130,21 @@
                 </ListGroupItem>
                 </ListGroup>
             </Card>
+            <div class="text-center pt-4">
+                <b-button
+                button="outline-dark"
+                size="lg"
+                type="button"
+                relative-width="25"
+                shadow
+                padding="3"
+                margin="b-5"
+                class="p-3"
+                href="./accounting-book_info.vue"
+                >
+                表示
+                </b-button>
+            </div>
         </div>
 
 </template>
