@@ -6,7 +6,6 @@
       <div class="row">
         <div class="col-6">
           <div class="input-group mb-3">
-            <span class="input-group-text"><h2>仕訳帳</h2></span>
             <thead>
               <tr>
                 <th>年度<ReusableSelect :options="select1Options" :size="select1Size" /></th>
@@ -17,6 +16,15 @@
               </tr>
             </thead>
           </div>
+          <b-div padding="t-3" class="d-flex justify-content-start align-items-center p-3">
+    <b-button button="outline-primary" margin="e-2">
+        ＜前月
+    </b-button>
+    <h2 margin="e-2">6月</h2>
+    <b-button button="outline-primary" margin="e-2">
+        翌月＞
+    </b-button>
+</b-div>
             <tbody>
               <tr>
                 <span class="input-group-text"><td>科目</td></span>
@@ -37,6 +45,23 @@
                 <input type="text" class="form-control" aria-label="jurnaNo">
               </tr>
             </tbody>
+            
+          <div class="btn-box">
+        <div class="col-btn-search-code"><a href="javascript:void(0);" onclick="doSearchCode();return false" class="btn btn-xs btn-default">検索</a></div>
+        <div class="col-btn-account-bookmark"><a href="javascript:void(0);" onclick="doListAccountBookmark();return false" class="btn btn-xs btn-default"><span class="glyphicon glyphicon-star text-primary" aria-hidden="true"></span>科目</a></div>
+        <div class="col-btn-clear"><a href="javascript:void(0);" onclick="doClear();return false" class="btn btn-xs btn-default">クリア</a></div>
+        <div class="col-btn-copy"><a href="javascript:void(0);" onclick="doCopy();return false" class="btn btn-xs btn-default">行コピー</a></div>
+        <div class="col-btn-past"><a href="javascript:void(0);" onclick="doPast();return false" class="btn btn-xs btn-default">行貼付</a></div>
+        <div class="col-btn-insert"><a href="javascript:void(0);" onclick="doInsert();return false" class="btn btn-xs btn-default">行挿入</a></div>
+        <div class="col-btn-delete"><a href="javascript:void(0);" onclick="doDelete();return false" class="btn btn-xs btn-default">行削除</a></div>
+        <div class="col-btn-duplicate"><a href="javascript:void(0);" class="btn btn-xs btn-default" data-original-title="" title="">複写</a></div>
+        <div class="col-btn-flipdc"><a href="javascript:void(0);" onclick="doFlipDC();return false" class="btn btn-xs btn-default">貸借入れ替え</a></div>
+
+        <div class="col-btn-pattern"><a href="javascript:void(0);" onclick="registerPattern();return false;" class="btn btn-xs btn-default">パターン登録</a></div>
+        <div class="col-btn-cancel"><a href="javascript:void(0);" onclick="doCancel();return false;" class="btn btn-xs btn-default">取消</a></div>
+        <div class="col-btn-register" id="btn_save"><a href="javascript:void(0);" onclick="registerJournal()" class="btn btn-xs btn-default">登録</a></div>
+        <div class="col-btn-delete" id="btn_delete" style="display: none;"><a href="javascript:void(0);" onclick="deleteJournal()" class="btn btn-xs btn-default">削除</a></div>
+    </div>
         </div>
       </div>
     </div>
