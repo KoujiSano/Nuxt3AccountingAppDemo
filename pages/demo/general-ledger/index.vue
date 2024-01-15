@@ -228,7 +228,7 @@
         </Col>
       </Row>
     </Card>
-    <Card class="mb">
+    <Card class="mb-3 mt-3">
       <b-button button="primary" size="lg">
         表示
       </b-button>
