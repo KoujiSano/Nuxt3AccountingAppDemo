@@ -34,17 +34,19 @@
   </b-div>
 </template>
 <script>
-export default{
-    data(){
-        return{
-            activeTavle:'table1',
+import { ref } from 'vue';
+
+export default {
+    setup() {
+        const activeTable = ref('table1');
+
+        const switchTable = (table) => {
+            activeTable.value = table;
+        };
+        return {
+            activeTable,
+            switchTable,
         };
     },
-    methods:{
-        switchTable(table){
-            this.activeTavle = table;
-        }
-    }
 };
-
 </script>
