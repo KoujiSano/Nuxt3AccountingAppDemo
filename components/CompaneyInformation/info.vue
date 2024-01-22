@@ -12,8 +12,10 @@
                            <input type="text" class="form-control" aria-label="jurnaNo">
                         </div>
                         <div class="input-group mb-3">
-                           <span class="input-group-text">仕訳番号のリセット</span>
-                           <input type="text" class="form-control" aria-label="jurnaNo">
+                            <span class="input-group-text">仕訳番号のリセット</span>
+                            <div class="form-check">
+                                <input type="radio">
+                            </div>
                         </div>
                     </Col>
                </Row>
