@@ -13,7 +13,7 @@
                             </b-option>
                         </BFormSelect>
                     </ListGroupItem>
-                    <CardHeader class="text-center">鑑定科目</CardHeader>
+                    <CardHeader class="text-center">勘定科目</CardHeader>
                         <ListGroupItem>
                                 <BFormSelect
                                 margin="x-auto"
