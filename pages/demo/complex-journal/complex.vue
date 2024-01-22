@@ -1,73 +1,113 @@
 <template>
-<div class="container">
-  <div class="card">
-    <div class="card-body">
-      <h1>複合仕訳入力</h1>
-      <div class="row">
-        <div class="col-6">
-          <div class="input-group mb-3">
-            <thead>
-              <tr>
-                <th>年度<ReusableSelect :options="select1Options" :size="select1Size" /></th>
-                <th>区分<ReusableSelect :options="select2Options" :size="select2Size" /></th>
-                <th>会計単位<ReusableSelect :options="select3Options" :size="select3Size" /></th>
-                <th>消費税<ReusableSelect :options="select4Options" :size="select4Size" /></th>
-                <th>対象期間<ReusableSelect :options="select5Options" :size="select5Size" /></th>
-              </tr>
-            </thead>
-          </div>
-          <b-div padding="t-3" class="d-flex justify-content-start align-items-center p-3">
-    <b-button button="outline-primary" margin="e-2">
-        ＜前月
-    </b-button>
-    <h2 margin="e-2">6月</h2>
-    <b-button button="outline-primary" margin="e-2">
-        翌月＞
-    </b-button>
-</b-div>
-            <tbody>
-              <tr>
-                <span class="input-group-text"><td>科目</td></span>
-                <input type="text" class="form-control" aria-label="jurnaNo">
-                <span class="input-group-text"><td>補助</td></span>
-                <input type="text" class="form-control" aria-label="jurnaNo">
-                <span class="input-group-text"><td>名称</td></span>
-                <input type="text" class="form-control" aria-label="jurnaNo">
-                <span class="input-group-text"><td>金額</td></span>
-                <input type="text" class="form-control" aria-label="jurnaNo">
-                <span class="input-group-text"><td>消費税区分</td></span>
-                <input type="text" class="form-control" aria-label="jurnaNo">
-                <span class="input-group-text"><td>消費税</td></span>
-                <input type="text" class="form-control" aria-label="jurnaNo">
-                <span class="input-group-text"><td>部門</td></span>
-                <input type="text" class="form-control" aria-label="jurnaNo">
-                <span class="input-group-text"><td>摘要</td></span>
-                <input type="text" class="form-control" aria-label="jurnaNo">
-              </tr>
-            </tbody>
-            
-          <div class="btn-box">
-        <div class="col-btn-search-code"><a href="javascript:void(0);" onclick="doSearchCode();return false" class="btn btn-xs btn-default">検索</a></div>
-        <div class="col-btn-account-bookmark"><a href="javascript:void(0);" onclick="doListAccountBookmark();return false" class="btn btn-xs btn-default"><span class="glyphicon glyphicon-star text-primary" aria-hidden="true"></span>科目</a></div>
-        <div class="col-btn-clear"><a href="javascript:void(0);" onclick="doClear();return false" class="btn btn-xs btn-default">クリア</a></div>
-        <div class="col-btn-copy"><a href="javascript:void(0);" onclick="doCopy();return false" class="btn btn-xs btn-default">行コピー</a></div>
-        <div class="col-btn-past"><a href="javascript:void(0);" onclick="doPast();return false" class="btn btn-xs btn-default">行貼付</a></div>
-        <div class="col-btn-insert"><a href="javascript:void(0);" onclick="doInsert();return false" class="btn btn-xs btn-default">行挿入</a></div>
-        <div class="col-btn-delete"><a href="javascript:void(0);" onclick="doDelete();return false" class="btn btn-xs btn-default">行削除</a></div>
-        <div class="col-btn-duplicate"><a href="javascript:void(0);" class="btn btn-xs btn-default" data-original-title="" title="">複写</a></div>
-        <div class="col-btn-flipdc"><a href="javascript:void(0);" onclick="doFlipDC();return false" class="btn btn-xs btn-default">貸借入れ替え</a></div>
+  <div class="container d-flex align-items-center justify-content-center min-vh-100">
+    <div class="card">
+      <div class="card-body">
+        <h1 class="mb-4">複合仕訳入力</h1>
 
-        <div class="col-btn-pattern"><a href="javascript:void(0);" onclick="registerPattern();return false;" class="btn btn-xs btn-default">パターン登録</a></div>
-        <div class="col-btn-cancel"><a href="javascript:void(0);" onclick="doCancel();return false;" class="btn btn-xs btn-default">取消</a></div>
-        <div class="col-btn-register" id="btn_save"><a href="javascript:void(0);" onclick="registerJournal()" class="btn btn-xs btn-default">登録</a></div>
-        <div class="col-btn-delete" id="btn_delete" style="display: none;"><a href="javascript:void(0);" onclick="deleteJournal()" class="btn btn-xs btn-default">削除</a></div>
-    </div>
+        <div class="row">
+          <div class="col-md-8">
+            <div class="input-group mb-3">
+              <label class="input-group-text">年度</label>
+              <ReusableSelect :options="select1Options" :size="select1Size" />
+              <label class="input-group-text">区分</label>
+              <ReusableSelect :options="select2Options" :size="select1Size" />
+              <label class="input-group-text">会計単位</label>
+              <ReusableSelect :options="select3Options" :size="select1Size" />
+              <label class="input-group-text">消費税</label>
+              <ReusableSelect :options="select4Options" :size="select1Size" />
+              <label class="input-group-text">対象期間</label>
+              <ReusableSelect :options="select5Options" :size="select1Size" />
+            </div>
+          </div>
+
+          <div class="col-md-6 d-flex justify-content-md-left mb-4">
+            <button class="btn btn-outline-primary me-md-2 mb-2 mb-md-0">＜前月</button>
+            <h2 class="me-2">6月</h2>
+            <button class="btn btn-outline-primary">翌月＞</button>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="d-flex flex-column mb-3">
+              <label class="input-group-text">科目</label>
+              <select class="form-select" aria-label="jurnaNo">
+                <option value="" selected disabled>お気に入り科目</option>
+                <option value="subject1">142 売掛金</option>
+                <option value="subject2">755 旅費交通費</option>
+                <option value="subject3">756 通信費</option>
+                <option value="subject4">760 消耗品費</option>
+                <option value="subject5">766 支払手数料</option>
+                <option value="subject6">789 雑費</option>
+              </select>
+              <label class="input-group-text">補助</label>
+              <input type="text" class="form-control" aria-label="jurnaNo">
+              <label class="input-group-text">名称</label>
+              <input type="text" class="form-control" aria-label="jurnaNo">
+              <label class="input-group-text">金額</label>
+              <input type="text" class="form-control" aria-label="jurnaNo">
+              <label class="input-group-text">消費税区分</label>
+              <select class="form-select" aria-label="jurnaNo">
+                <option value="" selected disabled></option>
+                <option value="subject1">対象外</option>
+                <option value="subject2">内税</option>
+                <option value="subject3">外税</option>
+              </select>
+              <label class="input-group-text">消費税</label>
+              <input type="text" class="form-control" aria-label="jurnaNo">
+              <label class="input-group-text">部門</label>
+              <input type="text" class="form-control" aria-label="jurnaNo">
+              <label class="input-group-text">摘要</label>
+              <input type="text" class="form-control" aria-label="jurnaNo">
+            </div>
+          </div>
+        </div>
+        
+        <div class="btn-box row ">
+          <div class="col-md-2">
+            <a href="#" onclick="doClear();return false" class="btn btn-outline-secondary btn-sm">検索</a>
+          </div>
+          <div class="col-md-2">
+            <a href="#" onclick="doClear();return false" class="btn btn-outline-secondary btn-sm">科目</a>
+          </div>
+          <div class="col-md-2">
+            <a href="#" onclick="doClear();return false" class="btn btn-outline-secondary btn-sm">クリア</a>
+          </div>
+          <div class="col-md-2">
+            <a href="#" onclick="doClear();return false" class="btn btn-outline-secondary btn-sm">行コピー</a>
+          </div>
+          <div class="col-md-2">
+            <a href="#" onclick="doClear();return false" class="btn btn-outline-secondary btn-sm">行貼り付け</a>
+          </div>
+          <div class="col-md-2">
+            <a href="#" onclick="doClear();return false" class="btn btn-outline-secondary btn-sm">行挿入</a>
+          </div>
+          <div class="col-md-2">
+            <a href="#" onclick="doClear();return false" class="btn btn-outline-secondary btn-sm">行削除</a>
+          </div>
+          <div class="col-md-2">
+            <a href="#" onclick="doClear();return false" class="btn btn-outline-secondary btn-sm">複写</a>
+          </div>
+          <div class="col-md-2">
+            <a href="#" onclick="doClear();return false" class="btn btn-outline-secondary btn-sm">貸借入れ替え</a>
+          </div>
+          <div class="col-md-2">
+            <a href="#" onclick="doClear();return false" class="btn btn-outline-secondary btn-sm">パターン登録</a>
+          </div>
+          <div class="col-md-2">
+            <a href="#" onclick="doClear();return false" class="btn btn-outline-secondary btn-sm">取り消し</a>
+          </div>
+          <div class="col-md-2">
+            <a href="#" onclick="doClear();return false" class="btn btn-outline-secondary btn-sm">登録</a>
+          </div>
+          <div class="col-md-2">
+            <a href="#" onclick="doClear();return false" class="btn btn-outline-secondary btn-sm">削除</a>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
-</template>
+</template>        
 
 <script setup>
 import ReusableSelect from '~/components/ReusableSelect.vue';
