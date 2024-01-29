@@ -24,7 +24,7 @@
           <div class="col-md-6 d-flex justify-content-md-left mb-4">
             <button class="btn btn-outline-primary me-md-2 mb-2 mb-md-0">＜前月</button>
             <h2 class="me-2">6月</h2>
-            <button class="btn btn-outline-primary">翌月＞</button>
+            <button class="btn btn-outline-primary me-md-2 mb-2 mb-md-0">翌月＞</button>
           </div>
         
 
@@ -64,48 +64,48 @@
           </div>
         </div>
         
-        <div class="btn-box row ">
-        <div class="input-group mb-3">
-          <div class="col-md-2">
-            <a href="#" onclick="doClear();return false" class="btn btn-outline-secondary btn-sm">検索</a>
+        <div class="btn-box row">
+          <div class="input-group mb-3">
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+              <a href="#" onclick="doClear();return false" class="btn btn-outline-secondary btn-sm">検索</a>
+            </div>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+              <a href="#" onclick="doClear();return false" class="btn btn-outline-secondary btn-sm">科目</a>
+            </div>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+              <a href="#" onclick="doClear();return false" class="btn btn-outline-secondary btn-sm">クリア</a>
+            </div>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+              <a href="#" onclick="doClear();return false" class="btn btn-outline-secondary btn-sm">行コピー</a>
+            </div>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+              <a href="#" onclick="doClear();return false" class="btn btn-outline-secondary btn-sm">行貼り付け</a>
+            </div>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+              <a href="#" onclick="doClear();return false" class="btn btn-outline-secondary btn-sm">行挿入</a>
+            </div>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+              <a href="#" onclick="doClear();return false" class="btn btn-outline-secondary btn-sm">行削除</a>
+            </div>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+              <a href="#" onclick="doClear();return false" class="btn btn-outline-secondary btn-sm">複写</a>
+            </div>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+              <a href="#" onclick="doClear();return false" class="btn btn-outline-secondary btn-sm">貸借入れ替え</a>
+            </div>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+              <a href="#" onclick="doClear();return false" class="btn btn-outline-secondary btn-sm">パターン登録</a>
+            </div>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+              <a href="#" onclick="doClear();return false" class="btn btn-outline-secondary btn-sm">取り消し</a>
+            </div>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+              <a href="#" onclick="doClear();return false" class="btn btn-outline-secondary btn-sm">登録</a>
+            </div>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+              <a href="#" onclick="doClear();return false" class="btn btn-outline-secondary btn-sm">削除</a>
+            </div>
           </div>
-          <div class="col-md-2">
-            <a href="#" onclick="doClear();return false" class="btn btn-outline-secondary btn-sm">科目</a>
-          </div>
-          <div class="col-md-2">
-            <a href="#" onclick="doClear();return false" class="btn btn-outline-secondary btn-sm">クリア</a>
-          </div>
-          <div class="col-md-2">
-            <a href="#" onclick="doClear();return false" class="btn btn-outline-secondary btn-sm">行コピー</a>
-          </div>
-          <div class="col-md-2">
-            <a href="#" onclick="doClear();return false" class="btn btn-outline-secondary btn-sm">行貼り付け</a>
-          </div>
-          <div class="col-md-2">
-            <a href="#" onclick="doClear();return false" class="btn btn-outline-secondary btn-sm">行挿入</a>
-          </div>
-          <div class="col-md-2">
-            <a href="#" onclick="doClear();return false" class="btn btn-outline-secondary btn-sm">行削除</a>
-          </div>
-          <div class="col-md-2">
-            <a href="#" onclick="doClear();return false" class="btn btn-outline-secondary btn-sm">複写</a>
-          </div>
-          <div class="col-md-2">
-            <a href="#" onclick="doClear();return false" class="btn btn-outline-secondary btn-sm">貸借入れ替え</a>
-          </div>
-          <div class="col-md-2">
-            <a href="#" onclick="doClear();return false" class="btn btn-outline-secondary btn-sm">パターン登録</a>
-          </div>
-          <div class="col-md-2">
-            <a href="#" onclick="doClear();return false" class="btn btn-outline-secondary btn-sm">取り消し</a>
-          </div>
-          <div class="col-md-2">
-            <a href="#" onclick="doClear();return false" class="btn btn-outline-secondary btn-sm">登録</a>
-          </div>
-          <div class="col-md-2">
-            <a href="#" onclick="doClear();return false" class="btn btn-outline-secondary btn-sm">削除</a>
-          </div>
-        </div>
         </div>
       </div>
     </div>
