@@ -28,7 +28,7 @@ const handleChange = () => {
 
 select {
   width: 100%;
-  padding: 0px;
+  padding: 7px;
   font-size: 16px;
 }
 </style>
