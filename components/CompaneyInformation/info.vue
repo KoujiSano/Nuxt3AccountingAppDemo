@@ -170,55 +170,55 @@
                    <Col col="sm-6">
                         <div class="input-group ">
                         <tr>
-                            <span class="input-group-text">製造原価科目</span>
+                            <span class="input-group-text">業者区分</span>
                             <BFormCheck inline>
                                 <input
                                 class="form-check-input"
                                 type="radio"
-                                name="targetDate"
-                                id="targetDate1"
+                                name="tax"
+                                id="tax1"
                                 checked
                                 />
-                            <label class="form-check-label" for="targetDate1">
-                               使用する
+                            <label class="form-check-label" for="tax1">
+                               課税
                             </label>
                             </BFormCheck>
                             <BFormCheck inline>
                             <input
                              class="form-check-input"
                              type="radio"
-                              name="targetDate"
-                             id="targetDate2"
+                              name="tax"
+                             id="tax2"
                              />
-                             <label class="form-check-label" for="targetDate2">
-                               使用しない
+                             <label class="form-check-label" for="tax2">
+                               免税
                               </label>
                             </BFormCheck>
-                             <span class="input-group-text">農業科目</span>
+                             <span class="input-group-text">経理処理方式</span>
                             <BFormCheck inline>
                                 <input
                                 class="form-check-input"
                                 type="radio"
-                                name="Range"
-                                id="Range1"
+                                name="t"
+                                id="t1"
                                 checked
                                 />
-                            <label class="form-check-label" for="Range1">
-                               使用する
+                            <label class="form-check-label" for="t1">
+                               税抜処理
                             </label>
                             </BFormCheck>
                             <BFormCheck inline>
                             <input
                              class="form-check-input"
                              type="radio"
-                              name="Range"
-                             id="Range2"
+                              name="t"
+                             id="t2"
                              />
-                             <label class="form-check-label" for="Range2">
-                               使用しない
+                             <label class="form-check-label" for="t2">
+                               税込処理
                               </label>
                             </BFormCheck>
-                            <span class="input-group-text">不動産科目</span>
+                            <span class="input-group-text">課税方式</span>
                             <BFormCheck inline>
                                 <input
                                 class="form-check-input"
@@ -228,7 +228,7 @@
                                 checked
                                 />
                             <label class="form-check-label" for="target1">
-                               使用する
+                               原則課税
                             </label>
                             </BFormCheck>
                             <BFormCheck inline>
@@ -239,32 +239,80 @@
                              id="target2"
                              />
                              <label class="form-check-label" for="target2">
-                               使用しない
+                               簡易課税
                               </label>
                             </BFormCheck>
-                            <span class="input-group-text">建設業科目</span>
+                            <span class="input-group-text">端数処理（売上）</span>
                             <BFormCheck inline>
                                 <input
                                 class="form-check-input"
                                 type="radio"
-                                name="Date"
-                                id="Date1"
+                                name="selling"
+                                id="selling1"
                                 checked
                                 />
-                            <label class="form-check-label" for="Date1">
-                               使用する
+                            <label class="form-check-label" for="selling1">
+                               切り捨て
                             </label>
                             </BFormCheck>
                             <BFormCheck inline>
                             <input
                              class="form-check-input"
                              type="radio"
-                              name="Date"
-                             id="Date2"
+                              name="selling"
+                             id="selling2"
                              />
-                             <label class="form-check-label" for="Date2">
-                               使用しない
+                             <label class="form-check-label" for="selling2">
+                               四捨五入
                               </label>
+                            </BFormCheck>
+                            <BFormCheck inline>
+                                <input
+                                class="form-check-input"
+                                type="radio"
+                                name="selling"
+                                id="selling３"
+                                checked
+                                />
+                            <label class="form-check-label" for="selling3">
+                               切り上げ
+                            </label>
+                            </BFormCheck>
+                            <span class="input-group-text">端数処理（仕入）</span>
+                            <BFormCheck inline>
+                                <input
+                                class="form-check-input"
+                                type="radio"
+                                name="purchase"
+                                id="purchase2"
+                                checked
+                                />
+                            <label class="form-check-label" for="purchase2">
+                               切り捨て
+                            </label>
+                            </BFormCheck>
+                            <BFormCheck inline>
+                            <input
+                             class="form-check-input"
+                             type="radio"
+                              name="purchase"
+                             id="purchase3"
+                             />
+                             <label class="form-check-label" for="purchase2">
+                               四捨五入
+                              </label>
+                            </BFormCheck>
+                            <BFormCheck inline>
+                                <input
+                                class="form-check-input"
+                                type="radio"
+                                name="purchase"
+                                id="purchase３"
+                                checked
+                                />
+                            <label class="form-check-label" for="purchase3">
+                               切り上げ
+                            </label>
                             </BFormCheck>
                             </tr>
                         </div>
