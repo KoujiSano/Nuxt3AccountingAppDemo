@@ -357,5 +357,11 @@
                </Row>
            </CardBody>
        </Card>
+       <b-button
+    button="primary"
+    @click="clicked"
+  >
+    確認
+  </b-button>
     </div>
 </template>
