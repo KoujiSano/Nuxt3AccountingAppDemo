@@ -1,41 +1,44 @@
 <template>
     <div class="container">
-        <div class="card">
-            <div class="card-body">
-                <h1>仕訳検索</h1>
-                <div class="row">
-                <div class="col-6">
-                    <div class="input-group mb-3">
-                        <span class="input-group-text">会計単位</span>
-                        <select class="form-select" aria-label="accountingUnit">
-                            <option selected>選択してください</option>
-                            <option value="1">会社A</option>
-                            <option value="2">会社B</option>
-                            <option value="3">会社C</option>
-                        </select>
-                        <span class="input-group-text">対象仕訳番号</span>
-                        <input type="text" class="form-control" aria-label="jurnaNo">
-                    </div>
-                    <div class="input-group mb-3">
-                        <span class="input-group-text">対象日付範囲</span>
-                        <input type="date" class="form-control" aria-label="date1">
-                        <span class="input-group-text">～</span>
-                        <input type="date" class="form-control" aria-label="date2">
-                    </div>
-                    
-                </div>
-                </div>
-                <table class="table table-bordered">
-                    <thead>
-                        <tr class="table-primary text-center">
-                            <th scope="col">日付</th>
-                            <th scope="col">仕訳番号</th>
-                            <th scope="col">補助科目</th>
-                            <th scope="col">相手科目</th>
-                        </tr>
-                    </thead>
-                </table>
-            </div>
-        </div>
+        <Card style="width: auto">
+            <CardHeader>仕訳検索</CardHeader>
+            <CardBody>
+                <b-span class="input-group-text">会計単位</b-span>
+                    <BFormSelect aria-label="Default select example">
+                        <b-option selected>選択してください</b-option>
+                        <b-option value="1">会社A</b-option>
+                        <b-option value="2">会社B</b-option>
+                        <b-option value="3">会社C</b-option>
+                    </BFormSelect>
+                <b-span class="input-group-text">対象仕訳番号</b-span>
+                <input type="text" class="form-control" aria-label="jurnaNo">
+                <div class="input-group mb-3">
+                    <b-span class="input-group-text">対象日付範囲</b-span>
+                    <input type="date" class="form-control" aria-label="date1">
+                    <b-span class="input-group-text">～</b-span>
+                    <input type="date" class="form-control" aria-label="date2">
+                    <b-button button="secondary">検索</b-button>
+                </div> 
+                
+                <b-table>
+                    <b-thead>
+                        <b-tr>
+                            <b-th scope="col">
+                            日付
+                            </b-th>
+                            <b-th scope="col">
+                            仕訳番号
+                            </b-th>
+                            <b-th scope="col">
+                            補助科目
+                            </b-th>
+                            <b-th scope="col">
+                            相手科目
+                            </b-th>
+                        </b-tr>
+                    </b-thead>
+                </b-table>
+            </CardBody>
+        </Card>
     </div>
 </template>
