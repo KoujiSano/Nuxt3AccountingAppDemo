@@ -17,7 +17,7 @@
             <li class="list-group-item"><NuxtLink to="/demo/book-keeping-journal" class="card-link">仕訳帳</NuxtLink></li>
             <li class="list-group-item"><NuxtLink to="/demo/journaList_Search/search" class="card-link">仕訳検索</NuxtLink></li>
             <li class="list-group-item">
-              <NuxtLink to="/accountledger" class="card-link">総勘定元帳</NuxtLink>
+              <NuxtLink to="/demo/general-ledger" class="card-link">総勘定元帳</NuxtLink>
             </li>
             <li class="list-group-item"><NuxtLink to="/demo/hojomototyou/subledger" class="card-link">補助元帳</NuxtLink></li>
             <li class="list-group-item"><NuxtLink to="/demo/accounting-book/accounting-book" class="card-link">出納帳</NuxtLink></li>
