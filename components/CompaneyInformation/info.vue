@@ -223,11 +223,11 @@
                                 <input
                                 class="form-check-input"
                                 type="radio"
-                                name="target"
-                                id="target1"
+                                name="way"
+                                id="way1"
                                 checked
                                 />
-                            <label class="form-check-label" for="target1">
+                            <label class="form-check-label" for="way1">
                                原則課税
                             </label>
                             </BFormCheck>
@@ -235,10 +235,10 @@
                             <input
                              class="form-check-input"
                              type="radio"
-                              name="target"
-                             id="target2"
+                              name="way"
+                             id="way2"
                              />
-                             <label class="form-check-label" for="target2">
+                             <label class="form-check-label" for="way2">
                                簡易課税
                               </label>
                             </BFormCheck>
