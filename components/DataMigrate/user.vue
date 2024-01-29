@@ -1,5 +1,3 @@
-
-import type { NuxtLink } from '#build/components';
 <template>
     <Card
     text-color="dark"
