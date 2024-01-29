@@ -320,5 +320,42 @@
                </Row>
            </CardBody>
        </Card>
+       <Card margin="b-3">
+           <CardHeader>決算</CardHeader>
+           <CardBody>
+               <Row>
+                   <Col col="sm-6">
+                        <div class="input-group">
+                        <tr>
+                            <span class="input-group-text">決算区分</span>
+                            <BFormCheck inline>
+                                <input
+                                class="form-check-input"
+                                type="radio"
+                                name="result"
+                                id="result1"
+                                checked
+                                />
+                            <label class="form-check-label" for="result1">
+                               中間決算と期末決算
+                            </label>
+                            </BFormCheck>
+                            <BFormCheck inline>
+                            <input
+                             class="form-check-input"
+                             type="radio"
+                              name="result"
+                             id="result2"
+                             />
+                             <label class="form-check-label" for="result2">
+                               四半期決算
+                              </label>
+                            </BFormCheck>
+                            </tr>
+                        </div>
+                    </Col>
+               </Row>
+           </CardBody>
+       </Card>
     </div>
 </template>
