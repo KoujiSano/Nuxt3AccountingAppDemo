@@ -58,7 +58,7 @@
            <CardHeader>勘定科目体系</CardHeader>
            <CardBody>
                <Row>
-                   <Col col="sm-6">
+                   <Col col="md-4">
                         <div class="input-group ">
                         <tr>
                             <span class="input-group-text">製造原価科目</span>
@@ -167,7 +167,7 @@
            <CardHeader>消費税情報</CardHeader>
            <CardBody>
                <Row>
-                   <Col col="sm-6">
+                   <Col col="md-4">
                         <div class="input-group ">
                         <tr>
                             <span class="input-group-text">業者区分</span>
