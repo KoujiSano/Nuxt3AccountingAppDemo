@@ -78,7 +78,7 @@ const financialData = userData();
       </BInputGroup>
       <b-a
         button="primary"
-        href="/demo/financial-statement/KessanHoukoku"
+        href="/demo/financial-statement/financial-statement"
         class="m-2"
       >
         確認
