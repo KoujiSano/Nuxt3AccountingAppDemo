@@ -1,3 +1,3 @@
 <template>
-    <h1>にゃんはろ～しょうさい</h1>
+    <h1>Financial Statement Details</h1>
 </template>
