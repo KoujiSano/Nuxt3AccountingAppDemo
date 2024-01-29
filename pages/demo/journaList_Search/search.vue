@@ -17,7 +17,6 @@
                     <input type="date" class="form-control" aria-label="date1">
                     <b-span class="input-group-text">～</b-span>
                     <input type="date" class="form-control" aria-label="date2">
-                    <b-button button="secondary">検索</b-button>
                 </div> 
                 
                 <b-table>
