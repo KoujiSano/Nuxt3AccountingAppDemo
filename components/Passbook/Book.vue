@@ -6,7 +6,7 @@
                 <th>年度</th>
                 <td>
                 <select class="form-select" aria-label="選択してください。">
-                    <option value="1">2020</option>
+                    <option value="1">2024</option>
                 </select>
                 </td>
             </tr>
@@ -42,20 +42,24 @@
 </table>
 </b-div>
 <b-div padding="t-3" class="d-flex justify-content-start align-items-center p-3">
-    <b-button button="outline-primary" margin="e-2">
-        ＜前月
-    </b-button>
-    <h2 margin="e-2">2月</h2>
-    <b-button button="outline-primary" margin="e-2">
-        翌月＞
-    </b-button>
-</b-div>
-<b-table>
-    <b-tbody>
-        <b-td scope="col" colspan="6" col="xs-8 sm-4" text-alignment="right">当月残高</b-td>
-        <b-td scope="col" colspan="2" col="xs-2 sm-1">41,125</b-td>
-    </b-tbody>
+    <div class="d-flex w-100">
+        <b-button button="outline-primary" margin="e-2">
+            ＜前月
+        </b-button>
+        <h2 margin="e-2">2月</h2>
+        <b-button button="outline-primary" margin="e-2">
+            翌月＞
+        </b-button>
+    </div>
+    <b-table bordered class="w-50">
+        <b-tbody>
+            <b-tr>
+                <b-td scope="col" col="xs-8 sm-4">当月残高</b-td>
+                <b-td scope="col" col="xs-2 sm-1">41,125</b-td>
+            </b-tr>
+        </b-tbody>
     </b-table>
+</b-div>
     <div>
     <b-table bordered>
       <b-thead>
@@ -87,13 +91,17 @@
       <b-tbody>
         <!-- データを描画するためのループ -->
         <b-tr v-for="(rowData, rowIndex) in extendedTableData" :key="rowIndex" text-alignment="center" text-wrap="nowrap">
-          <!-- 各行の列 -->
-          <b-td v-for="(value, colIndex) in rowData" :key="colIndex" :col="columnWidths[colIndex]">
-            <!-- テキストを表示 -->
-            {{ value }}
-          </b-td>
-        </b-tr>
-      </b-tbody>
+  <!-- 各行の列 -->
+  <b-td v-for="(value, colIndex) in rowData" :key="colIndex" :col="columnWidths[colIndex]">
+    <!-- ボタンを表示 -->
+    <b-button v-if="colIndex === 10 || colIndex === 6" style="background-color: transparent; border-color: #ced4da; color: #495057;">
+  {{ value }}
+</b-button>    <!-- ボタン以外の場合はテキストを表示 -->
+    <template v-else>
+      {{ value }}
+    </template>
+  </b-td>
+</b-tr>      </b-tbody>
     </b-table>
   </div>
 </template>
@@ -104,8 +112,7 @@ export default {
     return {
       tableData: [
         [1, '2024', 2, 1, '軽食', '福利厚生費', '科目', '3,105', '0', '43,291', '付箋'],
-        // 他の行のデータも同様に追加
-      ],
+    ],
       columnWidths: ['sm-0', 'sm-2', 'sm-0', 'sm-0', 'sm-4', 'sm-3', 'sm-1', 'sm-2', 'sm-2', 'sm-4'],
       // 各列の幅（sm-0やsm-2など）を指定するデータ
     };
@@ -113,9 +120,9 @@ export default {
   computed: {
     // 連番を含む20行のデータを作成
     extendedTableData() {
+      const firstRow = this.tableData[0];
       return Array.from({ length: 20 }, (_, index) => {
-        const baseData = [index + 1, ...this.tableData[0].slice(1).map(() => '')]; // 1列目に連番を割り振り、他の列を空白にする
-        return baseData;
+        return index === 0 ? firstRow : [index + 1, ...firstRow.slice(1).map(() => '')];
       });
     },
   },
