@@ -1,5 +1,6 @@
 <template>
     <Container>
-        <PassbookBook />
+        <PassbookBookSetting />
+        <PassbookBookData />
     </Container>
 </template>
