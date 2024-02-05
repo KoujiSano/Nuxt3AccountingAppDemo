@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { publicData } from '~/composables/usePublicData';
 
 const user = publicData();
 const financialData = userData();
