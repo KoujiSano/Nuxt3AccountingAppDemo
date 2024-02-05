@@ -1,8 +1,8 @@
-<script setup lang="ts">
-const { data:resData } = await useFetch('/api/user/useOrleans?url=AccountItem',)
+<script setup>
+const { data:response } = await useFetch('http://localhost:3939/Accounting/AccountItem',)
 
 </script>
 <template>
     <h1>Financial Statement Details</h1>
-    <h2>{{ resData[1] }}</h2>
+    <h2>{{ response }}</h2>
 </template>
