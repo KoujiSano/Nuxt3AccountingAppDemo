@@ -28,45 +28,47 @@
         </b-tr>
       </b-thead>
       <b-tbody>
-        <!-- データを描画するためのループ -->
-        <b-tr v-for="(rowData, rowIndex) in extendedTableData" :key="rowIndex" text-alignment="center" text-wrap="nowrap">
-  <!-- 各行の列 -->
-  <b-td v-for="(value, colIndex) in rowData" :key="colIndex" :col="columnWidths[colIndex]">
-    <!-- ボタンを表示 -->
-    <b-button v-if="colIndex === 10 || colIndex === 6" style="background-color: transparent; border-color: #ced4da; color: #495057;">
-  {{ value }}
-</b-button>    <!-- ボタン以外の場合はテキストを表示 -->
-    <template v-else>
-      {{ value }}
-    </template>
-</b-td>
-</b-tr>
+  <b-tr v-for="(rowData, index) in Array.from({ length: 20 }, (_, i) => i + 1)" :key="index" text-alignment="center" text-wrap="nowrap">
+    <!-- 各列のセル -->
+    <b-td scope="col">{{ index + 1 }}</b-td>
+    <b-td scope="col" col="sm-2">{{ tableData[index]?.column1 || '' }}</b-td>
+    <b-td scope="col" col="sm-0">{{ tableData[index]?.column2 || '' }}</b-td>
+    <b-td scope="col" col="sm-0">{{ tableData[index]?.column3 || '' }}</b-td>
+    <b-td scope="col">{{ tableData[index]?.column4 || '' }}</b-td>
+    <b-td scope="col" col="sm-3">{{ tableData[index]?.column5 || '' }}</b-td>
+    <b-td scope="col" col="sm-1">
+      <b-button>{{ '科目' }}</b-button>
+    </b-td>
+    <b-td scope="col">{{ tableData[index]?.column7 || '' }}</b-td>
+    <b-td scope="col">{{ tableData[index]?.column8 || '' }}</b-td>
+    <b-td scope="col">{{ tableData[index]?.column9 || '' }}</b-td>
+    <b-td scope="col">
+      <b-button>{{ '付箋' }}</b-button>
+    </b-td>
+  </b-tr>
 </b-tbody>
 </b-table>
 </div>
 </template>
 
 <script>
-    export default {
-        data() {
-            return {
-                tableData: [
-                    [1, '2024', 2, 1, '軽食', '福利厚生費', '科目', '3,105', '0', '43,291', '付箋'],
-                ],
-                columnWidths: ['sm-0', 'sm-2', 'sm-0', 'sm-0', 'sm-4', 'sm-3', 'sm-1', 'sm-2', 'sm-2', 'sm-4'],
-                // 各列の幅（sm-0やsm-2など）を指定するデータ
-            };
+export default {
+  data() {
+    return {
+      tableData: [
+        {
+          column1: '2024',
+          column2: '2',
+          column3: '1',
+          column4: '軽食',
+          column5: '福利厚生',
+          column7: '3,105',
+          column8: '0',
+          column9: '43,291',
         },
-        computed: {
-            // 連番を含む20行のデータを作成
-            extendedTableData() {
-                const firstRow = this.tableData[0];
-                return Array.from({
-                    length: 20
-                }, (_, index) => {
-                    return index === 0 ? firstRow : [index + 1, ...firstRow.slice(1).map(() => '')];
-                });
-            },
-        },
+        // Add more rows as needed
+      ],
     };
+  },
+};
 </script>
