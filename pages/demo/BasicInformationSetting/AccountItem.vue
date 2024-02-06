@@ -5,7 +5,7 @@
         <!--各種設定ボタン-->
         <!--Table切り替えボタン-->
         <b-div padding="t-3">
-            <b-div v-if="activeTavle === 'table1'">
+            <b-div v-if="activeTable === 'table1'">
             <b-button button="outline-primary"  active @click="switchTable('table1')" margin="e-2" col="sm-2">
                 賃借対照表
             </b-button>
@@ -13,7 +13,7 @@
                 損益計算書
             </b-button>
             </b-div>
-            <b-div v-if="activeTavle === 'table2'">
+            <b-div v-if="activeTable === 'table2'">
             <b-button button="outline-primary" @click="switchTable('table1')" margin="e-2" col="sm-2">
                 賃借対照表
             </b-button>
@@ -23,11 +23,11 @@
             </b-div>
         </b-div>
         <!--Table切り替えボタン-->
-        <b-div v-if="activeTavle === 'table1'">
+        <b-div v-if="activeTable === 'table1'">
             <!--賃借対照表-->
             <BasicInformationRentalContrastTable/>
         </b-div>
-        <b-div v-else-if="activeTavle === 'table2'">
+        <b-div v-else-if="activeTable === 'table2'">
             <!--損益計算表-->
             <BasicInformationProfitAndLoss/>
         </b-div>
