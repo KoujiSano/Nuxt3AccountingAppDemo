@@ -8,7 +8,7 @@ export const userData = () => {
 
 export const publicData = () => {
     return useState("publicData",() => ({
-        Name: "",
+        Name: "iri",
         CompanyName: "京都TECH",
         Address: "紅に染まりし森林の夢",
         Address2: "晴嵐-烈火街-",
