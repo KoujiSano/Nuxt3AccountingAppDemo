@@ -37,7 +37,7 @@
           <div class="card-header">各種設定</div>
           <ul class="list-group list-group-flush">
             <li class="list-group-item">
-              <NuxtLink to="#" class="card-link">会社基本設定</NuxtLink>
+              <NuxtLink to="/demo/companeyinformation/info" class="card-link">会社基本設定</NuxtLink>
             </li>
             <li class="list-group-item">
               <NuxtLink to="/demo/variousSettings/User" class="card-link">ユーザー情報</NuxtLink>
