@@ -9,7 +9,7 @@ const financialData = userData();
 <template>
   <container>
     <div>
-      <h1 class="mb-4">塩分を冥府に提出</h1>
+      <h1 class="mb-4"></h1>
       <Card class="text-center m-2">
         <CardHeader class="text-center">会計年度</CardHeader>
         <ListGroupItem class="m-3">

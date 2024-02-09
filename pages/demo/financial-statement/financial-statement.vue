@@ -4,7 +4,7 @@ const setkubun = (kbn:any) => (financialData.value.Kubun= kbn)
 </script>
 <template>
     <Container>
-      <h1 class="mb-3">Xx刹那漆黒xX決算報告書</h1>
+      <h1 class="mb-3">決算報告書</h1>
       <Card class="text-center">
         <CardHeader class="text-center">年度</CardHeader>
         <ListGroupItem class="m-3">
